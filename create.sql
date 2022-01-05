@@ -1,0 +1,13 @@
+CREATE TABLE users (
+	UserId SERIAL PRIMARY KEY, 
+	UserName VARCHAR NOT NULL, 
+	Password VARCHAR NOT NULL 
+);
+
+CREATE TABLE notices(
+	NoticeId SERIAL PRIMARY KEY, 
+	notice VARCHAR NOT NULL,
+	start_date TIMESTAMP NOT NULL,
+	end_date TIMESTAMP NOT NULL,
+	creation_timestamp TIMESTAMP NOT NULL
+);
