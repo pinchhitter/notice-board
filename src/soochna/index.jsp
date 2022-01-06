@@ -42,6 +42,39 @@
 
 	<script type="text/javascript">
 
+		function doDelete( noticeId ) {
+
+			var xmlhttp;
+
+			if (window.XMLHttpRequest){
+				 // code for IE7+, Firefox, Chrome, Opera, Safari
+				  xmlhttp=new XMLHttpRequest();
+			}
+			else if (window.ActiveXObject){
+				// code for IE6, IE5
+				 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			else{
+				alert("Your browser does not support XMLHTTP!");
+			}
+			xmlhttp.onreadystatechange=function(){
+
+				if( xmlhttp.readyState == 4 ){
+					var obj = JSON.parse( xmlhttp.responseText );		
+					if( obj.Create == "Successful"){		    	
+					  document.getElementById("response").innerHTML = "<span style=\"color:GREEN\">Notice Deleted: "+ obj.Create+" </span>";
+					  list_notice();
+					}							 
+					else		    
+					   document.getElementById("response").innerHTML = "<span style=\"color:RED\">Notice Deleted: "+ obj.Create+" </span>";
+				}
+			}
+
+			xmlhttp.open("GET","./deleteNotice?noticeId="+noticeId, true);
+			xmlhttp.send(null);
+		}
+
+
 		function list_notice() {
 
 			var xmlhttp;
@@ -61,15 +94,30 @@
 			xmlhttp.onreadystatechange=function(){
 
 				if(xmlhttp.readyState==4){
+
 					var obj = JSON.parse( xmlhttp.responseText );		
-					var table = "<table class=\"table table-striped\"> <tr> <th> # </th> <th> Notice </th> <th> Start-Date </th> <th> End-Date</th> </tr>\n"
-					for(var i = 0; i < obj.notice.length; i++) {
-    						var notice = obj.notice[i];
-						table += "<tr> <td>"+(i+1)+"</td><td> "+notice.notice+" </td> <td>"+notice.start_date+"</td> <td>"+notice.end_date+"</td> </tr>\n";
-					}
-					table += "\n</table>"
-					//document.getElementById("noticelist").innerHTML= obj.notice;
-					document.getElementById("noticelist").innerHTML= table;
+
+					if( obj.notice != null ){
+						var table = "<table class=\"table table-striped\"> <tr> <th> # </th> <th> Notice </th> <th> Start-Date </th> <th> End-Date</th> <th> </th> </tr>\n"		      	
+						for(var i = 0; i < obj.notice.length; i++) {
+						    var notice = obj.notice[i];
+						    table += "<tr> <td>"+(i+1)+"</td><td> "+notice.notice+" </td> <td>"+notice.start_date+"</td> <td>"+notice.end_date+"</td> <td> <input type=\"button\" value=\"Delete\" onclick=\"doDelete('"+notice.noticeid+"');\"> </td> </tr>\n";
+						}
+						table += "\n</table>" 
+
+						document.getElementById("noticelist").innerHTML= table;
+																							  			}else{
+						document.getElementById("noticelist").innerHTML= "";
+																							  			}
+																							  		      	if( obj.centers != null ){ 	
+				        	var option = '<option value="-1">Select Center</option>';  
+               			        	for (var i = 0; i < obj.centers.length; i++) {  
+                   					option += '<option value="' + obj.centers[i].centerId + '">' + obj.centers[i].centerName +'</option>';  
+               			        	}  
+				        	document.getElementById("center").innerHTML = option;
+					  }else{
+				        	var option = '<option value="ALL">All</option>';  
+					  }
 				}
 			}
 
@@ -77,10 +125,51 @@
 			xmlhttp.send(null);
 		}
 
+
+		/*
+		$(document).ready(function () {
+
+			$('#CreateNotice').click( function( event ) {
+
+				event.preventDefault();
+				var form = $('#create')[0];								      
+				var data = new FormData(form);
+				alert( data );				      
+				$("#CreateNotice").prop("disabled", true);	
+				$.ajax({
+            				type: "POST",
+            				enctype: 'multipart/form-data',
+            				url: "./create",
+            				data: data,
+            				processData: false,
+            				contentType: false,
+            				cache: false,
+            				timeout: 800000,
+            				success: function ( data ) {
+ 
+               					$("#response").text(data);
+                				console.log("SUCCESS : ", data);
+               	 				$("#CreateNotice").prop("disabled", false);
+
+						list_notice();
+ 
+            				},
+            				error: function (e) {
+
+                				$("#response").text( e.responseText );
+                				console.log("ERROR : ", e);
+                				$("#CreateNotice").prop("disabled", false);
+ 
+            				}
+        			});
+
+			});
+		});
+		*/
+		
 		function save_notice() {
 
 			var xmlhttp;
-
 			var elements = document.getElementsByClassName("formVal");
     			var formData = new FormData(); 
 			var data = "";
@@ -90,7 +179,8 @@
 					data = elements[i].name + "=" + elements[i].value;			    
 				else			    
 					data += "&"+ elements[i].name + "=" + elements[i].value;			    
-        			formData.append(elements[i].name, elements[i].value);
+
+        			formData.append( elements[i].name, elements[i].value );
     			}
 
 			if (window.XMLHttpRequest){
@@ -108,20 +198,19 @@
 			xmlhttp.onreadystatechange=function(){
 
 				if(xmlhttp.readyState==4){
-					list_notice();
-					var obj = JSON.parse( xmlhttp.responseText );		
-					if( obj.Create == "Successful")		    	
-						  document.getElementById("response").innerHTML = "<span style=\"color:GREEN\"> Adding Notice: "+ obj.Create+" </span>";
-					else		    
-						   document.getElementById("response").innerHTML = "<span style=\"color:RED\"> Adding Notice: "+ obj.Create+" </span>";
-
+				      var obj = JSON.parse( xmlhttp.responseText );		
+				      if( obj.Create == "Successful"){		    	
+					  document.getElementById("response").innerHTML = "<span style=\"color:GREEN\"> Adding Notice: "+ obj.Create+" </span>";
+					  list_notice();
+				      }else{		    
+					   document.getElementById("response").innerHTML = "<span style=\"color:RED\"> Adding Notice: "+ obj.Create+" </span>";
+				      }
 				}
 			}
 			xmlhttp.open("GET","./create?"+data, true);
 			xmlhttp.send( null );
 		}
 	</script>
-
 </head>
 
 <body onload="list_notice();" >
@@ -146,13 +235,15 @@
 	</div> 
 	<br>
 
-	<form method="post" class="create">
+	<form method="POST" >
+
 		<table class="table table-striped">	
 			<thead>
 				<tr>
 					<th> Notice </th>
 					<th> Start Date-Time </th>
 					<th> End Date-Time  </th>
+					<th> Center  </th>
 				</tr>
 			 </thead>		
 			 <tbody>	
@@ -160,21 +251,24 @@
 					<td> <input class="formVal"  name = "notice" type="text"/> </td>
 					<td> <input class="formVal" type="datetime-local" id="startdatetime" name="startdatetime"> </td>
 					<td> <input class="formVal" type="datetime-local" id="enddatetime" name="enddatetime"> </td>
+					<td> 
+						<select class="formVal" name="center" id="center"> 
+						</select>	
+					</td>	
 				</tr>
-
 				<tr>
-					<td colspan="3">  <input type="submit" value="save" onClick= "save_notice();return false;" > </td>
+					<td colspan="4" align='left'>  <input type="submit" value="Create Notice" onClick= "save_notice();return false;" > </td> 
 				</tr>
 			</tbody>
 		</table>
 		<br>
 		<div id="response"> </div>	
-		<br>
 		<div id="noticelist"> </div>	
-
 	</form>
+
 </div>
 <style>
+
 #container {
 	max-width: 660px;
 margin: 0 auto;

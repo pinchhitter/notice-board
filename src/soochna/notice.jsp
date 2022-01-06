@@ -63,39 +63,38 @@
 
 				var message = "";
 				var forvoice = "";
-
-				if( obj.notice.length > 0 ){
+				if( obj.notice != null ){
 					message = ""
 					//message = "<marquee width=\"50%\" direction=\"up\" height=\"180px\">"
 					for(var i = 0; i < obj.notice.length; i++) {
+						if( obj.notice[i].message.indexOf("shekhar") < 0  && obj.notice[i].message.indexOf("chandra") < 0 && obj.notice[i].message.indexOf("chintu") < 0)	      
 						message += "<H1>"+ obj.notice[i].message+"</H1> </br> "
 						forvoice += " "+ obj.notice[i].message ;
 					}			
 
 					//message += "\n</marquee>";
-
-				}			
-				var toSpeak = new SpeechSynthesisUtterance( forvoice );
-				var voices = synth.getVoices();
-				toSpeak.voice = voices[7];
-				synth.speak( toSpeak );
-				document.getElementById("screen").innerHTML = message;
-
+					var toSpeak = new SpeechSynthesisUtterance( forvoice );
+					var voices = synth.getVoices();
+					toSpeak.voice = voices[7];
+					synth.speak( toSpeak );
+					document.getElementById("screen").innerHTML = message;
+			      }else{
+				      document.getElementById("screen").innerHTML = "<H5> No Notice currently </H5>";
+			      }
 							    
-				var birthday = "";
-				if( obj.birthday.length > 0 ){
-					birthday = "<H3> C-DAC Mumbai family wishes </H3> <H2>";
+			      if( obj.birthday != null ){
+
+			      		var birthday = "<H3> C-DAC Mumbai family wishes </H3> <H2>";
+
 					for(var i = 0; i < obj.birthday.length; i++) {
 						if( i == 0)		    
 						   birthday +=  obj.birthday[i].name+" ("+obj.birthday[i].group+")";
 						else									      
-						   birthday +=  ","+obj.birthday[i].name+" ("+obj.birthday[i].group+")";
+						    birthday +=  " <br> "+obj.birthday[i].name+" ("+obj.birthday[i].group+")";
 					}			
 					birthday += "<H3> Happy Birthday</H3 </br>";
+					document.getElementById("birthday").innerHTML = birthday;
 				}			
-
-				document.getElementById("birthday").innerHTML = birthday;
-
 
 				//document.getElementById("screen").innerHTML= obj.message;
   			}

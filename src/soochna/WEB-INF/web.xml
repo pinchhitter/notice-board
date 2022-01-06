@@ -28,8 +28,18 @@
   </description>
 
     <servlet>
+      <servlet-name>delete</servlet-name>
+      <servlet-class>cdac.in.soochna.Delete</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/deleteNotice</url-pattern>
+    </servlet-mapping>	
+
+    <servlet>
       <servlet-name>create</servlet-name>
-      <servlet-class>cdac.in.suchana.Create</servlet-class>
+      <servlet-class>cdac.in.soochna.Create</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -37,9 +47,10 @@
         <url-pattern>/create</url-pattern>
     </servlet-mapping>	
 
+
     <servlet>
       <servlet-name>list</servlet-name>
-      <servlet-class>cdac.in.suchana.NoticeList</servlet-class>
+      <servlet-class>cdac.in.soochna.NoticeList</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -49,7 +60,7 @@
 	
     <servlet>
       <servlet-name>notice</servlet-name>
-      <servlet-class>cdac.in.suchana.Notice</servlet-class>
+      <servlet-class>cdac.in.soochna.Notice</servlet-class>
     </servlet>
 
     <servlet-mapping>
