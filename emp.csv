@@ -1,0 +1,323 @@
+1,Mumbai,MUMBAI PREMISE,Male,102326,MTS(A),Dr Sasikumar M,Executive Director,KBCS,sasi@cdac.in,31/07/1965,30/07/1987,30/07/1987,31/07/2025,31/07/2025,Regular,General,
+2,Mumbai,MUMBAI PREMISE,Male,210101,MTS(A),Mr Abhishek Kumar Gangwar,Joint Director,BIOMETRICS,abhishekg@cdac.in,01/04/1982,25/08/2005,15/10/2007,31/03/2042,31/03/2042,Regular,Other Backward Class,
+3,Mumbai,MUMBAI PREMISE,Male,210118,MAS(B),Mr Alex Mathew,Senior Admin Officer,CANTEEN,alexm@cdac.in,30/05/1964,04/11/1987,04/11/1987,31/05/2024,31/05/2024,Regular,General,
+4,Mumbai,MUMBAI PREMISE,Male,210201,MTS(A),Mr Amol Suroshe,Joint Director,ITSS,amol@cdac.in,23/03/1983,26/12/2005,26/12/2005,31/03/2043,31/03/2043,Regular,Scheduled Tribe,
+5,Mumbai,Juhu,Male,210303,MTS(A),Mr Mohasin Sutar,Principal Technical Officer,SENG,mohasin@cdac.in,02/09/1984,29/02/2008,20/02/2014,30/09/2044,30/09/2044,Regular,Other Backward Class,
+6,Mumbai,MUMBAI PREMISE,Male,210411,MAS(B),Mr Ashok Mukund Naik,Cook,CANTEEN,amnaik@cdac.in,12/03/1962,19/05/1986,19/05/1986,31/03/2022,31/03/2022,Regular,General,
+7,Mumbai,MUMBAI PREMISE,Male,210503,MTS(A),Mr Balaji Kodandapani Sorakapet,Principal Technical Officer,ETU,skbalaji@cdac.in,17/06/1988,23/08/2011,20/11/2013,30/06/2048,30/06/2048,Regular,Other Backward Class,
+8,Mumbai,MUMBAI PREMISE,Female,210701,MTS(A),Ms Archana Rane,Associate Director,ETU,archana@cdac.in,26/09/1979,29/07/2002,28/08/2007,30/09/2039,30/09/2039,Regular,General,
+9,Mumbai,MUMBAI PREMISE,Male,210721,MAS(B),Mr N K Birje,Cook,CANTEEN,nkbirje@cdac.in,28/11/1965,16/06/1992,16/06/1992,30/11/2025,30/11/2025,Regular,General,
+10,Mumbai,MUMBAI PREMISE,Female,210912,MAS(B),Ms Gracy Abreo,Senior Admin Officer,ADMIN,gracy@cdac.in,17/11/1968,10/03/1992,10/03/1992,30/11/2028,30/11/2028,Regular,General,
+11,Mumbai,MUMBAI PREMISE,Female,210922,MAS(B),Ms Anuradha Subramanian,Manager (Admin),ADMIN,anuradha@cdac.in,27/11/1962,16/09/1986,16/09/1986,30/11/2022,30/11/2022,Regular,General,
+12,Mumbai,MUMBAI PREMISE,Female,211012,MAS(B),Ms Madhavi Salvi,Manager (Admin),HRD,smadhavi@cdac.in,11/07/1967,24/04/1989,24/04/1989,31/07/2027,31/07/2027,Regular,General,
+13,Mumbai,MUMBAI PREMISE,Female,211326,MAS(B),Ms Bageerathi Krishnan Iyer,Senior Admin Officer,COURSE,sudhab@cdac.in,01/08/1970,20/07/1992,20/07/1992,31/07/2030,31/07/2030,Regular,General,
+14,Mumbai,MUMBAI PREMISE,Female,211415,MAS(B),Ms Truptee C Shah,Chief Librarian,Library,trupti@cdac.in,01/01/1962,17/07/1986,17/07/1986,31/12/2021,31/12/2021,Regular,MINORITY,
+15,Mumbai,MUMBAI PREMISE,Male,211426,MAS(B),Mr J D Hande,Attendant,ADMIN,jdhande@cdac.in,20/03/1963,22/09/1988,22/09/1988,31/03/2023,31/03/2023,Regular,General,
+16,Mumbai,MUMBAI PREMISE,Female,211517,MAS(B),Ms Renuka Chavan,Admin Officer,ADMIN,raihna@cdac.in,04/02/1969,14/02/1992,14/02/1992,28/02/2029,28/02/2029,Regular,General,
+17,Mumbai,MUMBAI PREMISE,Female,211717,MAS(B),Ms Sabrina Pereira,Manager (Admin),ADMIN,sabrina@cdac.in,08/02/1966,02/05/1989,02/05/1989,28/02/2026,28/02/2026,Regular,General,
+18,Mumbai,MUMBAI PREMISE,Male,212001,MTS(A),Mr Atul T Dhengre,Principal Technical Officer,SENG,atul@cdac.in,01/03/1983,31/01/2007,31/01/2007,28/02/2043,28/02/2043,Regular,Scheduled Caste,
+19,Mumbai,MUMBAI PREMISE,Male,212801,MTS(A),Dr C P Johnson,Senior Director,EDU TRN,johnson@cdac.in,03/05/1970,01/06/1999,01/06/1999,31/05/2030,31/05/2030,Regular,General,
+20,Mumbai,MUMBAI PREMISE,Female,212901,MTS(A),Ms Cini Radhakrishnan,Principal Technical Officer,SENG,cini@cdac.in,22/07/1982,25/03/2011,25/03/2011,31/07/2042,31/07/2042,Regular,General,
+21,Mumbai,MUMBAI PREMISE,Male,213001,MTS(A),Mr Chandra Shekhar,Joint Director,KBCS,shekhar@cdac.in,27/04/1982,02/08/2004,01/10/2010,30/04/2042,30/04/2042,Regular,General,
+22,Mumbai,MUMBAI PREMISE,Male,214401,MTS(A),Mr Golden Raymond Bhengra,Principal Technical Officer,SENG,raymond@cdac.in,12/01/1979,21/12/2005,21/12/2005,31/01/2039,31/01/2039,Regular,Scheduled Tribe,
+23,Mumbai,MUMBAI PREMISE,Male,215401,MTS(B),Mr Jeetendra Jagtap,MSS - II,CNIE,jeetendraj@cdac.in,23/08/1980,09/09/2010,19/07/2016,31/08/2040,31/08/2040,Regular,Scheduled Caste,
+24,Mumbai,MUMBAI PREMISE,Male,215801,MTS(A),Mr Kapil Kant Kamal,Joint Director,SENG,kapil@cdac.in,12/09/1982,12/02/2007,28/08/2007,30/09/2042,30/09/2042,Regular,Scheduled Caste,
+25,Mumbai,MUMBAI PREMISE,Female,216301,MTS(A),Ms Leena Chourey,Principal Technical Officer,ETU,leenac@cdac.in,03/05/1976,12/12/2007,01/07/2011,31/05/2036,31/05/2036,Regular,General,
+26,Mumbai,MUMBAI PREMISE,Male,217101,MTS(A),Mr Manish Kumar,Joint Director,SENG,kmanish@cdac.in,04/01/1981,11/10/2004,28/08/2007,31/01/2041,31/01/2041,Regular,General,
+27,Mumbai,MUMBAI PREMISE,Female,217501,MAS(B),Ms Manju Kurup,Admin Executive,ADMIN,menon@cdac.in,19/12/1981,27/09/2004,20/10/2015,31/12/2041,31/12/2041,Regular,General,
+28,Mumbai,MUMBAI PREMISE,Male,217801,MTS(A),Mr Nipun Pandey,Joint Director,SENG,nipun@cdac.in,31/12/1983,07/07/2006,01/07/2011,31/12/2043,31/12/2043,Regular,General,
+29,Mumbai,MUMBAI PREMISE,Female,217901,MTS(A),Ms Nirmala Salam,Joint Director,BIOMETRICS,nirmala@cdac.in,08/11/1974,09/04/2001,01/03/2007,30/11/2034,30/11/2034,Regular,Scheduled Tribe,
+30,Mumbai,MUMBAI PREMISE,Male,218001,MAS(B),Mr Navnath Kadam,Attendant,ADMIN,navnath@cdac.in,07/01/1982,22/09/2011,22/09/2011,31/01/2042,31/01/2042,Regular,General,
+31,Mumbai,MUMBAI PREMISE,Male,218801,MTS(A),Mr Pranaw Kumar,Principal Technical Officer,LCG,pranaw@cdac.in,05/03/1981,24/12/2007,24/02/2014,31/03/2041,31/03/2041,Regular,Other Backward Class,
+32,Mumbai,MUMBAI PREMISE,Female,219001,MTS(A),Dr (Ms) Padmaja Joshi,Senior Director,SENG,padmaja@cdac.in,23/02/1971,04/01/2008,04/01/2008,28/02/2031,28/02/2031,Regular,General,
+33,Mumbai,MUMBAI PREMISE,Male,220401,MTS(A),Mr Ranjit P L,Principal Technical Officer,SENG,ranjitpl@cdac.in,21/12/1977,12/03/2007,01/07/2011,31/12/2037,31/12/2037,Regular,Scheduled Caste,
+34,Mumbai,MUMBAI PREMISE,Male,220501,MTS(A),Mr Rajeev Srivastava,Joint Director,SENG,rajeevs@cdac.in,20/12/1978,12/07/2006,01/10/2010,31/12/2038,31/12/2038,Regular,General,
+35,Mumbai,MUMBAI PREMISE,Female,220701,MAS(B),Ms Ruta Khanvilkar,Senior Assistant,HRD,ruta@cdac.in,09/02/1984,27/09/2004,03/05/2021,29/02/2044,29/02/2044,Regular,General,
+36,Mumbai,MUMBAI PREMISE,Male,221501,MTS(A),Mr Sagun Baijal,Joint Director,OSS,sagun@cdac.in,15/10/1977,30/11/2007,30/11/2007,31/10/2037,31/10/2037,Regular,General,
+37,Mumbai,MUMBAI PREMISE,Male,224001,MTS(A),Mr Vijay Jain,Joint Director,SENG,vijayj@cdac.in,13/01/1983,01/11/2006,01/10/2010,31/01/2043,31/01/2043,Regular,General,
+38,Mumbai,MUMBAI PREMISE,Male,271138,MTS(A),Mr Peeyush Chomal,Joint Director,SENG,peeyush@cdac.in,05/10/1978,18/07/2000,29/09/2006,31/10/2038,31/10/2038,Regular,General,
+39,Mumbai,MUMBAI PREMISE,Male,271218,MAS(B),Mr P S Gandhi,Driver,TRANSPORT,psgandhi@cdac.in,01/06/1964,05/04/2000,05/04/2000,31/05/2024,31/05/2024,Regular,Other Backward Class,
+40,Mumbai,MUMBAI PREMISE,Female,271486,MAS(B),Ms Mercy Sobhan,Personal Private Secretary,KBCS,mercy@cdac.in,07/03/1965,01/08/1996,01/08/1996,31/03/2025,31/03/2025,Regular,General,
+41,Mumbai,MUMBAI PREMISE,Female,271544,MTS(A),Ms Rekha Nair,Joint Director,SENG,rekhap@cdac.in,15/09/1971,26/04/2000,29/09/2006,30/09/2031,30/09/2031,Regular,General,
+42,Mumbai,MUMBAI PREMISE,Female,271602,MTS(A),Ms Kavita Yadav,Senior Technical Officer,CNIE,kavita@cdac.in,14/08/1975,10/05/1999,01/07/2003,31/08/2035,31/08/2035,Regular,General,
+43,Mumbai,MUMBAI PREMISE,Female,271692,MAS(B),Ms Swapna Ballal,Admin Executive,HRD,swapnab@cdac.in,28/09/1980,16/12/2002,16/10/2015,30/09/2040,30/09/2040,Regular,General,
+44,Mumbai,MUMBAI PREMISE,Female,271693,MTS(A),Ms Shreya Bokare,Joint Director,CNIE,shreya@cdac.in,28/04/1978,30/11/2007,01/10/2010,30/04/2038,30/04/2038,Regular,General,
+45,Mumbai,MUMBAI PREMISE,Female,271842,MTS(A),Ms Akanksha Joshi,Principal Technical Officer,BIOMETRICS,akanksha@cdac.in,19/03/1985,03/11/2006,01/10/2010,31/03/2045,31/03/2045,Regular,General,
+46,Mumbai,MUMBAI PREMISE,Male,271892,MAS(B),Mr Tushar Koli,Senior Admin Officer,ACCOUNTS,tushar@cdac.in,17/03/1971,10/01/1997,10/01/1997,31/03/2031,31/03/2031,Regular,Other Backward Class,
+47,Mumbai,MUMBAI PREMISE,Male,271953,MTS(A),Mr Saurabh,Principal Technical Officer,SENG,saurabh@cdac.in,23/06/1983,11/08/2006,01/10/2010,30/06/2043,30/06/2043,Regular,Other Backward Class,
+48,Mumbai,MUMBAI PREMISE,Female,272696,MAS(B),Ms Gayatri Antani,Admin Officer,ACCOUNTS,gayatri@cdac.in,09/05/1969,21/08/1995,21/08/1995,31/05/2029,31/05/2029,Regular,General,
+49,Mumbai,MUMBAI PREMISE,Female,341270,MTS(B),Ms Naina Sonawani,Technical Assistant,SENG,nainas@cdac.in,03/05/1987,18/03/2013,18/03/2013,31/05/2047,31/05/2047,Regular,Other Backward Class,
+50,Mumbai,MUMBAI PREMISE,Male,341557,MTS(A),Mr Sathish Kumar Arumugasamy,Senior Technical Officer,SENG,asathish@cdac.in,11/07/1986,27/01/2014,27/01/2014,31/07/2046,31/07/2046,Regular,Other Backward Class,
+51,Mumbai,Juhu,Male,341573,MTS(A),Mr Samadhan Rajaram Manore,Principal Technical Officer,OSS,samadhanm@cdac.in,22/01/1985,18/02/2014,18/02/2014,31/01/2045,31/01/2045,Regular,Other Backward Class,
+52,Mumbai,Juhu,Male,341625,MTS(A),Mr Arun G,Principal Technical Officer,SENG,garun@cdac.in,20/05/1985,09/04/2014,09/04/2014,31/05/2045,31/05/2045,Regular,Other Backward Class,
+53,Mumbai,Juhu,Male,341658,MTS(A),Mr Sampathkumar Mende,Principal Technical Officer,SENG,sampath@cdac.in,10/01/1981,21/05/2014,21/05/2014,31/01/2041,31/01/2041,Regular,Other Backward Class,
+54,Mumbai,MUMBAI PREMISE,Male,341701,MTS(A),Mr Rakesh T,Principal Technical Officer,SENG,rakesht@cdac.in,09/03/1984,27/06/2014,27/06/2014,31/03/2044,31/03/2044,Regular,Scheduled Caste,
+55,Mumbai,Juhu,Male,342564,MTS(A),Mr Priyam Khare,Technical Officer,SENG,priyamk@cdac.in,31/12/1988,17/04/2017,17/04/2017,31/12/2048,31/12/2048,Regular,Not Available,
+56,Mumbai,Juhu,Male,342572,MTS(A),Mr Saidarshan Ramesh Bhagat,Senior Technical Officer,SENG,saidarshan@cdac.in,12/12/1984,02/05/2017,02/05/2017,31/12/2044,31/12/2044,Regular,General,
+57,Mumbai,MUMBAI PREMISE,Male,344473,MTS(B),Mr Arvind Kumar,Technical Assistant,ITSS,kumararvind@cdac.in,29/09/1993,03/05/2021,03/05/2021,30/09/2053,30/09/2053,Regular,General,
+58,Mumbai,MUMBAI PREMISE,Male,344554,MAS(B),Mr Chandra Sekhar Behera,Senior Assistant,ADMIN,chandrab@cdac.in,24/06/1985,21/06/2021,21/06/2021,30/06/2045,30/06/2045,Regular,Other Backward Class,
+59,Mumbai,MUMBAI PREMISE,Male,344556,MTS(B),Mr Bade Sachin Narayan,Technical Assistant,ITSS,bsachin@cdac.in,10/01/1994,21/06/2021,21/06/2021,31/01/2054,31/01/2054,Regular,Not Available,
+1,Mumbai,MUMBAI PREMISE,Male,210103,MTS(A),Mr Anupam Saxena,Principal Technical Officer,CNIE,anupam@cdac.in,10/08/1982,03/08/2007,28/08/2008,31/08/2042,27/08/2023,Grade Based Contract,PB3,
+2,Mumbai,MUMBAI PREMISE,Male,210301,MAS(B),Mr Ashok Bhosale,Driver,TRANSPORT,bashok@cdac.in,13/07/1971,10/04/2000,10/04/2000,31/07/2031,30/06/2022,Grade Based Contract,PB1,
+3,Mumbai,MUMBAI PREMISE,Male,210602,MTS(A),Mr Chetan Ahirrao,Joint Director,SENG,chetan@cdac.in,08/09/1984,25/02/2008,25/02/2008,30/09/2044,30/06/2022,Grade Based Contract,PB3,
+4,Mumbai,MUMBAI PREMISE,Male,212301,MTS(A),Mr Bira Chandra Singh,Principal Technical Officer,LCG,bira@cdac.in,01/06/1976,16/10/2006,06/08/2008,31/05/2036,31/12/2022,Grade Based Contract,PB3,
+5,Mumbai,MUMBAI PREMISE,Male,216601,MTS(A),Mr Manoj Kumar Singh,Principal Technical Officer,SENG,smanoj@cdac.in,04/10/1981,06/08/2007,09/09/2010,31/10/2041,08/09/2025,Grade Based Contract,PB3,
+6,Mumbai,MUMBAI PREMISE,Male,218201,MTS(A),Mr Prakash Pimpale,Joint Director,KBCS,prakash@cdac.in,13/12/1985,16/08/2007,01/09/2008,31/12/2045,31/08/2023,Grade Based Contract,PB3,
+7,Mumbai,MUMBAI PREMISE,Male,221301,MTS(A),Mr Shashi Bhushan Prabhakar,Senior Technical Officer,CNIE,shashi@cdac.in,05/01/1980,06/08/2008,01/08/2011,31/01/2040,31/07/2026,Grade Based Contract,PB3,
+8,Mumbai,MUMBAI PREMISE,Female,222401,MTS(A),Ms Shilpa Oswal,Principal Technical Officer,SENG,soswal@cdac.in,17/11/1982,13/08/2007,27/08/2008,30/11/2042,26/08/2023,Grade Based Contract,PB3,
+9,Mumbai,MUMBAI PREMISE,Male,223201,MTS(A),Mr Uttam Kumawat,Principal Technical Officer,CNIE,uttamkumawat@cdac.in,21/09/1983,02/08/2007,28/08/2008,30/09/2043,27/08/2023,Grade Based Contract,PB3,
+10,Mumbai,MUMBAI PREMISE,Female,223401,MTS(A),Ms Veena Tyagi,Associate Director,KBCS,vtyagi@cdac.in,11/07/1969,14/02/2008,14/02/2008,31/07/2029,13/11/2014,Grade Based Contract,PB4,
+11,Mumbai,MUMBAI PREMISE,Male,271225,MAS(B),Mr G M Dhumal,Driver,TRANSPORT,gmdhumal@cdac.in,01/06/1969,05/04/2000,05/04/2000,31/05/2029,30/06/2022,Grade Based Contract,PB1,
+12,Mumbai,MUMBAI PREMISE,Female,271285,MAS(B),Ms Rachna Gupta,Admin Officer,CANTEEN,rachna@cdac.in,10/07/1972,28/04/2004,28/04/2004,31/07/2032,30/06/2025,Grade Based Contract,PB2,
+13,Mumbai,MUMBAI PREMISE,Male,271573,MAS(B),Mr Khetru More,Driver,TRANSPORT,khetrum@cdac.in,22/10/1965,05/04/2000,05/04/2000,31/10/2025,30/06/2022,Grade Based Contract,PB1,
+14,Mumbai,MUMBAI PREMISE,Female,271632,MAS(B),Ms Rekha Sivasankaran,Admin Executive,ADMIN,rekhas@cdac.in,05/04/1973,11/08/2000,11/08/2000,30/04/2033,30/06/2022,Grade Based Contract,PB2,
+15,Mumbai,MUMBAI PREMISE,Male,271633,MTS(A),Mr Reniguntla Sambaiah,Principal Technical Officer,OSS,reniguntla@cdac.in,10/02/1986,23/11/2009,01/08/2011,28/02/2046,31/07/2026,Grade Based Contract,PB3,
+16,Mumbai,MUMBAI PREMISE,Male,272102,MAS(B),Mr Ramakant Gajanan Yeware,Senior Admin Officer,ADMIN,ramakant@cdac.in,07/11/1967,16/03/2000,16/03/2000,30/11/2027,30/06/2022,Grade Based Contract,PB2,
+17,Mumbai,MUMBAI PREMISE,Male,340905,MTS(A),Mr Shiv Nath Kumar,Principal Technical Officer,KBCS,shivnath@cdac.in,04/01/1983,18/11/2009,08/08/2011,31/01/2043,07/08/2026,Grade Based Contract,PB3,
+1,Mumbai,MUMBAI PREMISE,Male,210202,CONS,Mr Amar Sarkar,Miscellaneous Project Staff,CANTEEN,amars@cdac.in,03/04/1983,13/04/2006,13/04/2006,12/04/2024
+2,Mumbai,MUMBAI PREMISE,Female,210204,CONS,Ms Seema Sapkal,Project Support Staff,ACCOUNTS,seemas@cdac.in,24/08/1985,23/02/2011,23/02/2011,22/03/2022
+3,Mumbai,MUMBAI PREMISE,Male,210805,CONS,Mr B Mariappa,Miscellaneous Project Staff,CANTEEN,bmariappa@cdac.in,18/04/1977,24/03/2006,24/03/2006,23/03/2024
+4,Mumbai,MUMBAI PREMISE,Female,211801,CONS,Ms Anamika Singh,Project Engineer,BIOMETRICS,anamika@cdac.in,09/03/1986,30/10/2009,29/04/2016,28/04/2022
+5,Mumbai,MUMBAI PREMISE,Male,212201,CONS,Mr B C L Narasaiah,Project Engineer,SENG,narasaiah@cdac.in,28/05/1984,20/02/2008,01/02/2016,31/01/2022
+6,Mumbai,MUMBAI PREMISE,Male,213101,CONS,Mr Chandrakant Kate,Miscellaneous Project Staff,ITSS,chandrakantk@cdac.in,26/05/1979,09/09/2010,09/09/2010,08/09/2022
+7,Mumbai,MUMBAI PREMISE,Female,213401,CONS,Ms Harshadaa  Shroff,Project Support Staff,ACCOUNTS,dolly@cdac.in,22/04/1983,29/11/2004,03/07/2006,30/06/2024
+8,Mumbai,MUMBAI PREMISE,Female,213601,CONS,Ms Dhanashri Vaibhav Dalvi,Project Support Staff,ACCOUNTS,dhanashri@cdac.in,31/12/1984,18/09/2006,01/02/2008,31/01/2023
+9,Mumbai,MUMBAI PREMISE,Female,214101,CONS,Ms Geeta Nair,Project Support Staff,ED Office,geetan@cdac.in,23/05/1980,27/11/2002,14/09/2005,31/12/2023
+10,Mumbai,MUMBAI PREMISE,Female,215101,CONS,Ms Jean Jojo,Project Support Staff,ADMIN,jean@cdac.in,03/11/1980,07/02/2008,07/02/2008,06/02/2023
+11,Mumbai,MUMBAI PREMISE,Male,215501,CONS,Mr Kunal Hatkar,Project Support Staff,ACCOUNTS,kunalh@cdac.in,09/08/1988,03/03/2011,03/03/2011,02/04/2022
+12,Mumbai,MUMBAI PREMISE,Male,216401,CONS,Mr Laxman Jha,Miscellaneous Project Staff,ADMIN,laxmanj@cdac.in,03/05/1978,09/09/2010,09/09/2010,08/09/2022
+13,Mumbai,MUMBAI PREMISE,Male,217401,CONS,Mr Mahesh Gujar,Miscellaneous Project Staff,TRANSPORT,maheshg@cdac.in,15/03/1976,16/02/2006,16/02/2006,15/02/2024
+14,Mumbai,MUMBAI PREMISE,Male,219201,CONS,Mr Prashant Dev,Miscellaneous Project Staff,TRANSPORT,dprashant@cdac.in,04/11/1969,16/07/2007,16/07/2007,15/07/2023
+15,Mumbai,MUMBAI PREMISE,Female,219501,CONS,Ms Rupali Shripad Todkar,Project Support Staff,Library,rupali@cdac.in,30/08/1984,13/09/2010,13/09/2010,12/09/2023
+16,Mumbai,MUMBAI PREMISE,Male,219901,CONS,Mr Ramchandra Gaikwad,Miscellaneous Project Staff,TRANSPORT,ramchandrag@cdac.in,01/05/1974,16/02/2006,16/02/2006,15/08/2023
+17,Mumbai,MUMBAI PREMISE,Male,221201,CONS,Mr Shrimant More,Miscellaneous Project Staff,TRANSPORT,shrimantm@cdac.in,01/05/1970,16/02/2006,16/02/2006,15/02/2024
+18,Mumbai,MUMBAI PREMISE,Male,221601,CONS,Mr Shashikant Kadam,Miscellaneous Project Staff,TRANSPORT,kshashikant@cdac.in,08/04/1974,16/02/2006,16/02/2006,15/02/2024
+19,Mumbai,MUMBAI PREMISE,Female,222101,CONS,Ms Suman Ninoriya,Project Engineer,ETU,nsuman@cdac.in,26/10/1979,15/09/2011,15/09/2011,14/09/2023
+20,Mumbai,MUMBAI PREMISE,Male,222301,CONS,Mr Santosh Kute,Miscellaneous Project Staff,TRANSPORT,santoshkute@cdac.in,01/06/1978,16/07/2007,16/07/2007,15/07/2023
+21,Mumbai,MUMBAI PREMISE,Male,223501,CONS,Mr Vishwanath Kalsekar,Miscellaneous Project Staff,ADMIN,vishwanathk@cdac.in,10/11/1969,09/09/2010,09/09/2010,08/09/2022
+22,Mumbai,MUMBAI PREMISE,Male,224101,CONS,Mr Varunkrishnan T K,Project Engineer,BIOMETRICS,varuntk@cdac.in,11/03/1982,21/10/2009,02/05/2016,01/05/2022
+23,Mumbai,MUMBAI PREMISE,Female,271116,CONS,Ms Sweta Suhasaria,Project Engineer,BIOMETRICS,swetas@cdac.in,08/03/1980,01/10/2008,01/10/2008,30/09/2022
+24,Mumbai,MUMBAI PREMISE,Female,271141,CONS,Ms Anuradha Santosh,Project Support Staff,ACCOUNTS,anuradhas@cdac.in,23/09/1982,01/06/2006,03/07/2006,30/06/2024
+25,Mumbai,MUMBAI PREMISE,Male,341018,CONS,Mr Nikhil Singh Rajput,Project Engineer,BIOMETRICS,nikhilr@cdac.in,12/10/1988,26/03/2012,27/01/2016,26/01/2022
+26,Mumbai,MUMBAI PREMISE,Female,341051,CONS,Ms Jayati Dwivedi,Project Engineer,SENG,jayatid@cdac.in,11/05/1990,08/05/2012,08/05/2012,28/02/2022
+27,Mumbai,MUMBAI PREMISE,Male,341054,CONS,Mr Sudheer Kumar Kotha,Project Engineer,ETU,sudheerk@cdac.in,25/03/1986,16/05/2012,16/05/2012,15/05/2024
+28,Mumbai,MUMBAI PREMISE,Female,341298,CONS,Ms Meghana S.Jagtap,Project Engineer,SENG,jmeghana@cdac.in,24/01/1991,23/04/2013,23/04/2013,22/04/2023
+29,Mumbai,MUMBAI PREMISE,Male,341300,CONS,Mr Vaibhav Singh,Project Engineer,ETU,vaibhavs@cdac.in,01/04/1990,23/04/2013,23/04/2013,23/04/2023
+30,Mumbai,MUMBAI PREMISE,Male,341301,CONS,Mr Vishal Dewarde,Project Engineer,SENG,vishald@cdac.in,13/06/1989,23/04/2013,23/04/2013,22/04/2022
+31,Mumbai,MUMBAI PREMISE,Male,341305,CONS,Mr Mukund Kakde,Project Engineer,ETU,mukundk@cdac.in,27/09/1989,25/04/2013,25/04/2013,24/04/2023
+32,Mumbai,MUMBAI PREMISE,Male,341309,CONS,Mr Madhur Ingale,Project Engineer,ETU,imadhur@cdac.in,30/05/1990,29/04/2013,29/04/2013,28/04/2023
+33,Mumbai,MUMBAI PREMISE,Male,341311,CONS,Mr Nikhil S. Chinchole,Project Engineer,BIOMETRICS,nikhilc@cdac.in,17/11/1990,26/04/2013,26/04/2013,25/04/2023
+34,Mumbai,MUMBAI PREMISE,Female,341464,CONS,Ms Priyanka Priyank Anbhavne,Project Engineer,ETU,priyankam@cdac.in,29/04/1990,23/09/2013,23/09/2013,22/09/2022
+35,Mumbai,MUMBAI PREMISE,Male,341558,CONS,Mr Ahmad Hassan,Project Engineer,SENG,ahmad@cdac.in,10/07/1983,23/01/2014,29/01/2016,28/01/2022
+36,Mumbai,MUMBAI PREMISE,Male,341580,CONS,Mr Abhishek Singh,Project Engineer,ETU,abhisheksingh@cdac.in,23/08/1989,21/02/2014,21/02/2014,20/02/2023
+37,Mumbai,MUMBAI PREMISE,Male,341740,CONS,Mr Sagar Chandrakant Jadhav,Project Engineer,ETU,jsagar@cdac.in,09/11/1990,18/08/2014,18/08/2014,17/08/2023
+38,Mumbai,Juhu,Female,341745,CONS,Ms Manali Badrike,Project Engineer,SENG,manali@cdac.in,29/05/1991,14/08/2014,14/08/2014,13/08/2023
+39,Mumbai,Juhu,Male,342013,CONS,Mr Shashank Patel,Project Engineer,SENG,shashank@cdac.in,26/02/1993,06/07/2015,06/07/2015,05/07/2024
+40,Mumbai,Juhu,Male,342063,CONS,Mr Tushar Shivlal Chavan,Project Engineer,LCG,tusharc@cdac.in,29/09/1992,19/08/2015,19/08/2015,18/08/2024
+41,Mumbai,Juhu,Male,342073,CONS,Mr Amitesh Banerjee,Project Engineer,LCG,amiteshb@cdac.in,16/12/1990,21/08/2015,21/08/2015,20/08/2023
+42,Mumbai,Juhu,Male,342077,CONS,Mr Mohinish Uzzwal,Project Engineer,SENG,mohinish@cdac.in,17/09/1991,21/08/2015,21/08/2015,20/08/2024
+43,Mumbai,Juhu,Male,342189,CONS,Dr Kavi Raju C,Project Officer,ADMIN,kavirajuc@cdac.in,20/02/1982,11/02/2016,11/02/2016,10/02/2023
+44,Mumbai,Juhu,Male,342228,CONS,Mr Amol Vishwanath Bole,Project Engineer,LCG,amolb@cdac.in,15/12/1987,29/02/2016,29/02/2016,28/02/2022
+45,Mumbai,Juhu,Male,342276,CONS,Mr Patil  Atul Ganesh,Project Engineer,LCG,atulp@cdac.in,25/11/1991,09/05/2016,09/05/2016,08/05/2022
+46,Mumbai,MUMBAI PREMISE,Female,342311,CONS,Ms Jayshri Ashokrao Kharule,Project Engineer,ETU,jayshrik@cdac.in,26/01/1993,30/06/2016,30/06/2016,29/06/2022
+47,Mumbai,MUMBAI PREMISE,Male,342351,CONS,Mr Aditya Sawant,Project Engineer,CNIE,adityas@cdac.in,04/04/1993,17/08/2016,17/08/2016,16/08/2022
+48,Mumbai,MUMBAI PREMISE,Female,342352,CONS,Ms Bhavika Ninawe,Project Engineer,SENG,bhavikan@cdac.in,22/10/1993,17/08/2016,17/08/2016,16/08/2022
+49,Mumbai,MUMBAI PREMISE,Male,342357,CONS,Mr Sandesh Mandhane,Project Engineer,SENG,msandesh@cdac.in,30/09/1993,18/08/2016,18/08/2016,17/08/2022
+50,Mumbai,MUMBAI PREMISE,Male,342366,CONS,Mr Vinay Vijay Jadhav,Project Engineer,ETU,jvinay@cdac.in,07/02/1994,19/08/2016,19/08/2016,18/08/2022
+51,Mumbai,MUMBAI PREMISE,Female,342367,CONS,Ms Vaishali Katkar,Project Engineer,ETU,kvaishali@cdac.in,15/10/1992,19/08/2016,19/08/2016,18/08/2022
+52,Mumbai,MUMBAI PREMISE,Male,342404,CONS,Mr Abhijit Vidhate,Project Engineer,SENG,abhijitv@cdac.in,11/08/1992,25/08/2016,25/08/2016,24/08/2022
+53,Mumbai,MUMBAI PREMISE,Female,342563,CONS,Ms Meghna Gupta,Project Engineer,SENG,meghnag@cdac.in,28/12/1988,31/03/2017,31/03/2017,30/03/2022
+54,Mumbai,Juhu,Male,342833,CONS,Mr Gajanan Shivaji Lobhe,Project Engineer,ITSS,gajanan@cdac.in,30/06/1992,14/02/2018,14/02/2018,13/02/2023
+55,Mumbai,MUMBAI PREMISE,Male,342853,CONS,Mr Sohan Suresh More,Project Engineer,EDU TRN,sohan@cdac.in,09/10/1994,01/03/2018,01/03/2018,28/02/2023
+56,Mumbai,MUMBAI PREMISE,Male,342854,CONS,Mr Abhijit Bapurao Wagh,Project Engineer,ETU,abhijit@cdac.in,20/01/1994,01/03/2018,01/03/2018,28/02/2023
+57,Mumbai,MUMBAI PREMISE,Male,342856,CONS,Mr Amit Kumar Upadhyay,Project Engineer,ETU,amitu@cdac.in,02/01/1994,01/03/2018,01/03/2018,28/02/2023
+58,Mumbai,MUMBAI PREMISE,Male,342930,CONS,Mr Tejas Ambadas Damale,Project Engineer,SENG,tejas@cdac.in,30/12/1994,16/03/2018,16/03/2018,15/03/2023
+59,Mumbai,MUMBAI PREMISE,Male,343009,CONS,Mr Akshay Patil,Project Engineer,SENG,akshaypatil@cdac.in,15/05/1995,08/06/2018,08/06/2018,07/06/2023
+60,Mumbai,MUMBAI PREMISE,Male,343029,CONS,Mr Mandar Pradeep Wadkar,Project Engineer,SENG,mandarwadkar@cdac.in,30/07/1995,13/08/2018,13/08/2018,12/08/2023
+61,Mumbai,MUMBAI PREMISE,Female,343033,CONS,Ms Manasi Tanaji Khot,Project Engineer,ETU,manasi@cdac.in,10/01/1996,09/08/2018,09/08/2018,08/08/2023
+62,Mumbai,MUMBAI PREMISE,Female,343036,CONS,Ms Sayali Abhijeet Chaudhari,Project Engineer,ETU,sayali@cdac.in,03/04/1995,10/08/2018,10/08/2018,09/08/2023
+63,Mumbai,MUMBAI PREMISE,Female,343059,CONS,Ms Aishwarya Kale,Project Engineer,ETU,aishwaryak@cadc.in,02/11/1995,24/08/2018,24/08/2018,23/08/2023
+64,Mumbai,MUMBAI PREMISE,Male,343071,CONS,Mr Rohan Nadkarni,Project Engineer,ETU,nrohan@cdac.in,03/04/1995,27/08/2018,27/08/2018,26/08/2022
+65,Mumbai,MUMBAI PREMISE,Male,343199,CONS,Mr Ashish,Project Engineer,SENG,hashish@cdac.in,14/12/1992,16/10/2018,16/10/2018,15/10/2021
+66,Mumbai,MUMBAI PREMISE,Male,343267,CONS,Mr Meerjada Altamas,Project Engineer,KBCS,meerjada@cdac.in,12/09/1994,07/01/2019,07/01/2019,06/01/2022
+67,Mumbai,MUMBAI PREMISE,Male,343335,CONS,Mr Vijayendra Sunil Thosar,Project Engineer,KBCS,vijayendrat@cdac.in,12/10/1992,20/02/2019,20/02/2019,19/02/2022
+68,Mumbai,Juhu,Male,343336,CONS,Mr Vikas Dukare,Project Engineer,SENG,dvikas@cdac.in,06/10/1996,20/02/2019,20/02/2019,19/02/2022
+69,Mumbai,MUMBAI PREMISE,Female,343406,CONS,Ms Sameeksha Katle,Project Engineer,ETU,sameeksha@cdac.in,20/08/1997,08/04/2019,02/08/2021,01/08/2022
+70,Mumbai,MUMBAI PREMISE,Male,343407,CONS,Mr Pratik Sonawane,Project Engineer,ETU,spratik@cdac.in,26/12/1995,08/04/2019,02/08/2021,01/08/2022
+71,Mumbai,MUMBAI PREMISE,Male,343433,CONS,Mr Pratik  B Patil,Project Engineer,BIOMETRICS,pratikpatil@cdac.in,10/06/1995,06/05/2019,06/05/2019,05/05/2022
+72,Mumbai,MUMBAI PREMISE,Male,343509,CONS,Mr Ayan Datta,Project Engineer,ETU,ayan@cdac.in,07/12/1989,13/08/2019,13/08/2019,12/08/2023
+73,Mumbai,MUMBAI PREMISE,Male,343511,CONS,Mr Amol Sarjerao Gawade,Project Engineer,ETU,amolg@cdac.in,09/12/1991,16/08/2019,16/08/2019,15/08/2023
+74,Mumbai,MUMBAI PREMISE,Male,343527,CONS,Mr Vinay Hinukale,Project Engineer,BIOMETRICS,vinayh@cdac.in,07/03/1995,19/08/2019,19/08/2019,18/08/2023
+75,Mumbai,MUMBAI PREMISE,Male,343528,CONS,Mr Akhilesh Kashikar,Project Engineer,ETU,akhileshk@cdac.in,28/11/1995,19/08/2019,19/08/2019,18/08/2023
+76,Mumbai,MUMBAI PREMISE,Female,343529,CONS,Ms Nupur Paralkar,Project Engineer,KBCS,nupur_11@cdac.in,11/11/1991,20/08/2019,20/08/2019,19/08/2023
+77,Mumbai,Juhu,Female,343534,CONS,Ms Abhilasha Sharma,Project Engineer,SENG,abhilashas@cdac.in,29/05/1994,21/08/2019,21/08/2019,20/08/2022
+78,Mumbai,Juhu,Male,343536,CONS,Mr Nikhil Pawar,Project Engineer,ITSS,pnikhil@cdac.in,18/09/1996,22/08/2019,22/08/2019,21/08/2023
+79,Mumbai,MUMBAI PREMISE,Female,343564,CONS,Ms Shraddha Pawar,Project Engineer,ETU,shraddhap@cdac.in,08/01/1997,28/08/2019,28/08/2019,27/08/2023
+80,Mumbai,MUMBAI PREMISE,Male,343566,CONS,Mr Nikhil Sonani,Project Engineer,ETU,nikhils@cdac.in,14/12/1995,27/08/2019,27/08/2019,26/08/2023
+81,Mumbai,MUMBAI PREMISE,Female,343567,CONS,Ms Asawari Shinde,Project Engineer,ETU,asawari@cdac.in,08/12/1992,26/08/2019,26/08/2019,25/08/2023
+82,Mumbai,MUMBAI PREMISE,Female,343568,CONS,Ms Shweta Pal,Project Engineer,ETU,shwetapal@cdac.in,02/05/1996,26/08/2019,26/08/2019,25/08/2023
+83,Mumbai,MUMBAI PREMISE,Male,343633,CONS,Mr Arpit Bhatiya,Project Engineer,SENG,arpit@cdac.in,03/09/1996,11/09/2019,11/09/2019,10/09/2023
+84,Mumbai,MUMBAI PREMISE,Male,343654,CONS,Mr Kunal Anil Utage,Project Engineer,ETU,kunalu@cdac.in,16/10/1990,18/10/2019,18/10/2019,17/10/2021
+85,Mumbai,MUMBAI PREMISE,Female,343828,CONS,Ms Pratiksha Katale,Project Engineer,ETU,pratikshak@cdac.in,07/01/1998,14/02/2020,14/02/2020,13/02/2023
+86,Mumbai,Juhu,Male,343829,CONS,Mr Omkar Rajendra Karande,Project Engineer,SENG,omkarrk@cdac.in,06/03/1998,14/02/2020,14/02/2020,13/02/2023
+87,Mumbai,MUMBAI PREMISE,Male,343831,CONS,Mr Prashik Ashok Ghutke,Project Engineer,ETU,prashik@cdac.in,23/01/1997,14/02/2020,14/02/2020,13/02/2023
+88,Mumbai,MUMBAI PREMISE,Male,343836,CONS,Mr Kaustubh Dhananjay Zagade,Project Engineer,ETU,kaustubhz@cdac.in,30/11/1996,17/02/2020,17/02/2020,16/02/2023
+89,Mumbai,MUMBAI PREMISE,Female,343839,CONS,Ms Nisha Shreedhar Dasame,Project Engineer,ETU,dnisha@cdac.in,28/01/1997,17/02/2020,17/02/2020,16/02/2023
+90,Mumbai,MUMBAI PREMISE,Female,343840,CONS,Ms Shivani Verma,Project Engineer,ETU,shivaniv@cdac.in,28/06/1994,17/02/2020,17/02/2020,16/02/2023
+91,Mumbai,MUMBAI PREMISE,Male,343842,CONS,Mr Shubham Rai,Project Engineer,ETU,shubhamr@cdac.in,01/01/1997,17/02/2020,17/02/2020,16/02/2023
+92,Mumbai,MUMBAI PREMISE,Female,343944,CONS,Ms Nikita Gupta,Project Engineer,SENG,gnikita@cdac.in,23/12/1996,24/02/2020,24/02/2020,23/02/2023
+93,Mumbai,MUMBAI PREMISE,Male,343949,CONS,Mr Kiran Ugalmugale,Project Engineer,ETU,ukiran@cdac.in,15/02/1995,09/03/2020,09/03/2020,08/03/2023
+94,Mumbai,MUMBAI PREMISE,Male,343950,CONS,Mr Rohan Baliram Rakunde,Project Engineer,ETU,rohanr@cdac.in,29/09/1994,09/03/2020,09/03/2020,08/03/2023
+95,Mumbai,MUMBAI PREMISE,Female,343954,CONS,Ms Vrushali Mahendra Chaudhari,Project Engineer,ETU,vrushalic@cdac.in,14/10/1995,11/03/2020,11/03/2020,10/03/2023
+96,Mumbai,MUMBAI PREMISE,Male,343966,CONS,Mr Aakash Narayane,Project Engineer,ETU,aakashn@cdac.in,19/10/1994,17/03/2020,17/03/2020,16/03/2023
+97,Mumbai,MUMBAI PREMISE,Male,343967,CONS,Mr Faizanur Rab,Project Engineer,ETU,faizanur@cdac.in,22/06/1996,17/03/2020,17/03/2020,16/03/2023
+98,Mumbai,MUMBAI PREMISE,Female,343968,CONS,Ms Mokshada Pagare,Project Engineer,ETU,mokshada@cdac.in,01/04/1996,16/03/2020,16/03/2020,15/03/2023
+99,Mumbai,MUMBAI PREMISE,Male,343970,CONS,Mr Shashikant Khetmalis,Project Engineer,ETU,shashi7507@cdac.in,22/05/1996,16/03/2020,16/03/2020,15/03/2023
+100,Mumbai,MUMBAI PREMISE,Male,344011,CONS,Mr Surendra Singh,Knowledge Associate,ETU,surendras@cdac.in,12/05/1995,13/08/2020,13/08/2020,12/08/2023
+101,Mumbai,Juhu,Female,344035,CONS,Ms Pragya Rani,Project Engineer,ETU,pragya@cdac.in,15/08/1994,24/08/2020,24/08/2020,23/08/2023
+102,Mumbai,MUMBAI PREMISE,Female,344040,CONS,Ms Ramola Amit Bhowmik,Project Officer,ADMIN,ramola@cdac.in,09/06/1985,02/09/2020,02/09/2020,01/09/2022
+103,Mumbai,MUMBAI PREMISE,Male,344055,CONS,Mr Pravin Bhaskar Ramteke,Knowledge Associate,ETU,pravinr@cdac.in,11/09/1987,16/09/2020,16/09/2020,15/09/2023
+104,Mumbai,Juhu,Female,344107,CONS,Ms Shubhangi Suresh Sawant,Project Engineer,ETU,shubhangis@cdac.in,15/06/1989,14/12/2020,14/12/2020,13/12/2021
+105,Mumbai,Juhu,Female,344108,CONS,Ms Trupti Keshav Badhekar,Project Engineer,SENG,truptib@cdac.in,07/12/1995,15/12/2020,15/12/2020,14/12/2021
+106,Mumbai,Juhu,Male,344110,CONS,Mr Thamotharan Mani,Project Engineer,ETU,thamom@cdac.in,28/10/1994,17/12/2020,17/12/2020,16/12/2021
+107,Mumbai,MUMBAI PREMISE,Female,344111,CONS,Ms Rutuja Deshpande,Project Engineer,ETU,rutujad@cdac.in,06/11/1995,17/12/2020,17/12/2020,16/12/2021
+108,Mumbai,MUMBAI PREMISE,Female,344112,CONS,Ms Shilpi Priya Sen,Project Engineer,KBCS,shilpisen@cdac.in,19/04/1994,21/12/2020,21/12/2020,20/12/2021
+109,Mumbai,MUMBAI PREMISE,Female,344113,CONS,Ms Supriya Jantre,Project Engineer,ETU,supriyaj@cdac.in,21/04/1991,28/12/2020,28/12/2020,27/12/2021
+110,Mumbai,Juhu,Female,344114,CONS,Ms Krushangi Patel,Project Engineer,ETU,krushangi@cdac.in,20/05/1996,28/12/2020,28/12/2020,27/12/2021
+111,Mumbai,Juhu,Female,344123,CONS,Ms Shefali Chapre,Project Engineer,ETU,shefali@cdac.in,11/01/1994,08/01/2021,08/01/2021,07/01/2022
+112,Mumbai,MUMBAI PREMISE,Female,344130,CONS,Ms Asmita Suresh Babar,Project Engineer,ETU,asmita@cdac.in,15/09/1994,11/01/2021,11/01/2021,10/01/2022
+113,Mumbai,MUMBAI PREMISE,Male,344149,CONS,Mr Ganesh Mahadeo Kharat,Project Engineer,ETU,kganesh@cdac.in,15/04/1992,28/01/2021,28/01/2021,27/01/2022
+114,Mumbai,Juhu,Male,344150,CONS,Mr Piyush Bhupendra Soney,Project Engineer,ETU,piyushs@cdac.in,04/09/1997,28/01/2021,28/01/2021,27/01/2022
+115,Mumbai,MUMBAI PREMISE,Male,344152,CONS,Mr Preetam Bhosle,Project Engineer,ETU,preetam@cdac.in,10/08/1988,29/01/2021,29/01/2021,28/01/2022
+116,Mumbai,MUMBAI PREMISE,Male,344154,CONS,Mr Omkar Ramakant Yeware,Project Engineer,ETU,omkary@cdac.in,17/10/1997,01/02/2021,01/02/2021,31/01/2022
+117,Mumbai,MUMBAI PREMISE,Female,344155,CONS,Ms Sanvi Vikas Patil,Project Engineer,SENG,sanvi@cdac.in,15/01/1995,02/02/2021,02/02/2021,01/02/2022
+118,Mumbai,Juhu,Male,344162,CONS,Mr Rupesh Rajmal Patil,Project Engineer,ETU,rupesh@cdac.in,01/10/1992,15/02/2021,15/02/2021,14/02/2022
+119,Mumbai,MUMBAI PREMISE,Female,344166,CONS,Ms Swati Gupta,Project Engineer,ETU,swatigupta@cdac.in,01/07/1988,19/02/2021,19/02/2021,18/02/2022
+120,Mumbai,MUMBAI PREMISE,Male,344168,CONS,Mr Dipesh Chaudhari,Project Engineer,ETU,dipeshc@cdac.in,16/01/1996,22/02/2021,22/02/2021,18/02/2022
+121,Mumbai,MUMBAI PREMISE,Female,344169,CONS,Ms Aishwarya Kapileshwar,Project Engineer,COURSE,kaishwarya@cdac.in,27/03/1997,22/02/2021,22/02/2021,21/02/2022
+122,Mumbai,MUMBAI PREMISE,Female,344170,CONS,Ms Ashwini Jadhav,Project Engineer,COURSE,ashwinij@cdac.in,25/09/1995,22/02/2021,22/02/2021,21/02/2022
+123,Mumbai,MUMBAI PREMISE,Female,344171,CONS,Ms Shivangi Dubey,Project Engineer,ETU,shivangid@cdac.in,21/11/1997,22/02/2021,22/02/2021,21/02/2022
+124,Mumbai,Juhu,Male,344173,CONS,Mr Udit Kodgir,Project Engineer,SENG,udit@cdac.in,14/03/1997,22/02/2021,22/02/2021,21/02/2022
+125,Mumbai,MUMBAI PREMISE,Male,344174,CONS,Mr Manoj Yadav,Project Engineer,ETU,manojy@cdac.in,27/11/1997,22/02/2021,22/02/2021,21/02/2022
+126,Mumbai,MUMBAI PREMISE,Female,344175,CONS,Ms Sanjyot Sawant,Project Engineer,ETU,sanjyot@cdac.in,02/12/1996,23/02/2021,23/02/2021,22/02/2022
+127,Mumbai,MUMBAI PREMISE,Female,344176,CONS,Ms Shweta Arun Karde,Project Engineer,ETU,kshweta@cdac.in,12/05/1996,23/02/2021,23/02/2021,22/02/2022
+128,Mumbai,MUMBAI PREMISE,Male,344177,CONS,Mr Saurabh Mishra,Project Engineer,KBCS,msaurabh@cdac.in,11/07/1995,23/02/2021,23/02/2021,22/02/2022
+129,Mumbai,MUMBAI PREMISE,Female,344178,CONS,Ms Priyanka Dudhat,Project Engineer,SENG,priyanka107@cdac.in,10/08/1997,23/02/2021,23/02/2021,22/02/2022
+130,Mumbai,MUMBAI PREMISE,Female,344179,CONS,Ms Varsha Gawari,Project Engineer,SENG,varshag@cdac.in,17/05/1994,23/02/2021,23/02/2021,22/02/2022
+131,Mumbai,MUMBAI PREMISE,Male,344180,CONS,Mr Mayank Rathore,Project Engineer,SENG,rmayank@cdac.in,12/09/1996,23/02/2021,23/02/2021,22/02/2022
+132,Mumbai,MUMBAI PREMISE,Female,344181,CONS,Ms Priyanka Soni,Project Engineer,SENG,psoni@cdac.in,29/04/1994,23/02/2021,23/02/2021,22/02/2022
+133,Mumbai,MUMBAI PREMISE,Male,344182,CONS,Mr Shubham Kulkarni,Project Engineer,SENG,shubhamkulkarni@cdac.in,10/12/1997,22/02/2021,22/02/2021,21/02/2022
+134,Mumbai,MUMBAI PREMISE,Male,344183,CONS,Mr Saurabh Shahane,Project Engineer,SENG,ssaurabh@cdac.in,16/12/1998,22/02/2021,22/02/2021,21/02/2022
+135,Mumbai,MUMBAI PREMISE,Female,344184,CONS,Ms Sarika Sonawane,Project Engineer,ETU,sarika@cdac.in,13/08/1995,22/02/2021,22/02/2021,21/02/2022
+136,Mumbai,MUMBAI PREMISE,Male,344185,CONS,Mr Ganesh Kulkarni,Project Engineer,SENG,ganeshkulkarni@cdac.in,23/09/1996,22/02/2021,22/02/2021,21/02/2022
+137,Mumbai,MUMBAI PREMISE,Male,344186,CONS,Mr Wali Hasan,Project Engineer,ITSS,wali@cdac.in,13/07/1997,22/02/2021,22/02/2021,21/02/2022
+138,Mumbai,MUMBAI PREMISE,Female,344187,CONS,Mr Tejaswini Patil,Project Engineer,ITSS,tejaswini@cdac.in,25/12/1995,22/02/2021,22/02/2021,21/02/2022
+139,Mumbai,MUMBAI PREMISE,Male,344188,CONS,Mr Aditya Bhavi,Project Engineer,SENG,adityabhavi@cdac.in,11/06/1997,22/02/2021,22/02/2021,21/02/2022
+140,Mumbai,MUMBAI PREMISE,Male,344190,CONS,Mr Anil Kumar Chaurasiya,Project Engineer,ETU,anilc@cdac.in,10/07/1993,24/02/2021,24/02/2021,23/02/2022
+141,Mumbai,MUMBAI PREMISE,Female,344211,CONS,Ms Puja Arkal,Project Engineer,ETU,apuja@cdac.in,14/02/1995,01/03/2021,01/03/2021,28/02/2022
+142,Mumbai,MUMBAI PREMISE,Female,344212,CONS,Ms Ankita Gautam,Project Engineer,ETU,ankitag@cdac.in,12/03/1996,01/03/2021,01/03/2021,28/02/2022
+143,Mumbai,MUMBAI PREMISE,Male,344261,CONS,Mr Sandesh Jadhav,Project Engineer,SENG,sandesh@cdac.in,11/10/1997,04/03/2021,04/03/2021,03/03/2022
+144,Mumbai,MUMBAI PREMISE,Male,344306,CONS,Mr Amit Rathor,Project Engineer,SENG,amitr@cdac.in,18/12/1993,05/03/2021,05/03/2021,04/03/2022
+145,Mumbai,MUMBAI PREMISE,Male,344308,CONS,Mr Swapnil Patre,Project Engineer,ETU,swapnilp@cdac.in,04/04/1996,05/03/2021,05/03/2021,04/03/2022
+146,Mumbai,MUMBAI PREMISE,Female,344315,CONS,Ms Neha Narkhede,Project Engineer,ETU,nehan@cdac.in,05/06/1998,05/03/2021,05/03/2021,04/03/2022
+147,Mumbai,MUMBAI PREMISE,Female,344317,CONS,Ms Shweta Mahajan,Project Engineer,ETU,shwetam@cdac.in,25/09/1997,05/03/2021,05/03/2021,04/03/2022
+148,Mumbai,MUMBAI PREMISE,Female,344346,CONS,Ms Bhagyashree Joshi,Project Engineer,BIOMETRICS,bhagyas@cdac.in,27/04/1997,08/03/2021,08/03/2021,07/03/2022
+149,Mumbai,MUMBAI PREMISE,Male,344347,CONS,Ms Tushar Digambar Rane,Project Engineer,ETU,tushard@cdac.in,05/10/1997,08/03/2021,08/03/2021,07/03/2022
+150,Mumbai,MUMBAI PREMISE,Male,344348,CONS,Mr Deepanjan Joth,Project Engineer,BIOMETRICS,deepanjan@cdac.in,18/04/1994,08/03/2021,08/03/2021,07/03/2022
+151,Mumbai,MUMBAI PREMISE,Male,344349,CONS,Mr Abhishek Deshpande,Project Engineer,SENG,abhid@cdac.in,19/09/1996,08/03/2021,08/03/2021,07/03/2022
+152,Mumbai,MUMBAI PREMISE,Female,344350,CONS,Ms Sayali Rane,Project Engineer,SENG,rsayali@cdac.in,13/07/1997,08/03/2021,08/03/2021,07/03/2022
+153,Mumbai,MUMBAI PREMISE,Male,344351,CONS,Mr Chetan Sunil Sonawane,Project Engineer,ETU,chetanss@cdac.in,22/11/1996,08/03/2021,08/03/2021,07/03/2022
+154,Mumbai,MUMBAI PREMISE,Male,344352,CONS,Mr Rohit Vikas Patil,Project Engineer,ETU,rpatil@cdac.in,23/03/1997,08/03/2021,08/03/2021,07/03/2022
+155,Mumbai,MUMBAI PREMISE,Male,344353,CONS,Mr Nirmal Dilip Jain,Project Engineer,ETU,nirmald@cdac.in,06/01/1997,08/03/2021,08/03/2021,07/03/2022
+156,Mumbai,MUMBAI PREMISE,Male,344354,CONS,Mr Akash Fuldeore,Project Engineer,SENG,akashf@cdac.in,14/09/1997,08/03/2021,08/03/2021,07/03/2022
+157,Mumbai,MUMBAI PREMISE,Male,344355,CONS,Mr Raj Bhosle,Project Engineer,ETU,braj@cdac.in,11/10/1996,08/03/2021,08/03/2021,07/03/2022
+158,Mumbai,MUMBAI PREMISE,Male,344356,CONS,Mr Hanmant Annarao Bawage,Project Engineer,ETU,hanmant@cdac.in,27/03/1995,08/03/2021,08/03/2021,07/03/2022
+159,Mumbai,MUMBAI PREMISE,Male,344357,CONS,Mr Prathmesh Ashok Kesare,Project Engineer,ETU,prathmesh@cdac.in,18/09/1997,08/03/2021,08/03/2021,07/03/2022
+160,Mumbai,MUMBAI PREMISE,Male,344358,CONS,Mr Anurag Shrivastava,Project Engineer,SENG,anuragsh@cdac.in,24/06/1997,08/03/2021,08/03/2021,07/03/2022
+161,Mumbai,MUMBAI PREMISE,Male,344359,CONS,Mr Onkar Arun Patil,Project Engineer,ETU,onkar@cdac.in,28/12/1996,08/03/2021,08/03/2021,07/03/2022
+162,Mumbai,MUMBAI PREMISE,Male,344360,CONS,Mr Adinath Sanjay Raut,Project Engineer,KBCS,adinath@cdac.in,20/11/1996,08/03/2021,08/03/2021,07/03/2022
+163,Mumbai,MUMBAI PREMISE,Male,344361,CONS,Mr Neil Shah,Project Engineer,SENG,neilshah@cdac.in,28/03/1997,08/03/2021,08/03/2021,07/03/2022
+164,Mumbai,MUMBAI PREMISE,Male,344362,CONS,Mr Prasanna Borate,Project Engineer,ETU,bprasanna@cdac.in,09/04/1997,08/03/2021,08/03/2021,07/03/2022
+165,Mumbai,MUMBAI PREMISE,Male,344363,CONS,Mr Sumit Ade,Project Engineer,SENG,asumit@cdac.in,08/06/1996,08/03/2021,08/03/2021,07/03/2022
+166,Mumbai,MUMBAI PREMISE,Male,344364,CONS,Ms Mokshika Joshi,Project Engineer,ETU,mokshika@cdac.in,20/12/1997,08/03/2021,08/03/2021,07/03/2022
+167,Mumbai,MUMBAI PREMISE,Female,344365,CONS,Ms Bhagyashri Sanjay Deore,Project Engineer,ETU,bhaghyashri@cdac.in,12/08/1997,08/03/2021,08/03/2021,07/03/2022
+168,Mumbai,MUMBAI PREMISE,Female,344366,CONS,Mr Anagha Borkar,Project Engineer,ETU,anagha@cdac.in,30/06/1997,08/03/2021,08/03/2021,07/03/2022
+169,Mumbai,MUMBAI PREMISE,Female,344367,CONS,Ms Rasika Shendage,Project Engineer,ETU,rasika@cdac.in,05/08/1997,08/03/2021,08/03/2021,07/03/2022
+170,Mumbai,MUMBAI PREMISE,Male,344368,CONS,Mr Dnyandeep Yadav,Project Engineer,ETU,dnyandeep@cdac.in,11/11/1994,09/03/2021,09/03/2021,08/03/2022
+171,Mumbai,MUMBAI PREMISE,Male,344369,CONS,Mr Shubham Patel,Project Engineer,ETU,skalpesh@cdac.in,05/04/1997,08/03/2021,08/03/2021,07/03/2022
+172,Mumbai,MUMBAI PREMISE,Male,344370,CONS,Mr Yogesh Amle,Project Engineer,ETU,yamle@cdac.in,07/05/1995,09/03/2021,09/03/2021,08/03/2022
+173,Mumbai,MUMBAI PREMISE,Male,344371,CONS,Mr Suyash Opalkar,Project Engineer,ETU,ssuyash@cdac.in,24/12/1996,08/03/2021,08/03/2021,07/03/2022
+174,Mumbai,MUMBAI PREMISE,Female,344372,CONS,Ms Kalyani Thakare,Project Engineer,KBCS,kalyani@cdac.in,15/11/1996,08/03/2021,08/03/2021,07/03/2022
+175,Mumbai,MUMBAI PREMISE,Male,344373,CONS,Mr Arjun Trivedi,Project Engineer,SENG,arjunt@cdac.in,25/05/1998,08/03/2021,08/03/2021,07/02/2022
+176,Mumbai,MUMBAI PREMISE,Female,344374,CONS,Ms Madhuri Madhukar Patil,Project Engineer,ETU,pmadhuri@cdac.in,24/04/1993,09/03/2021,09/03/2021,08/03/2022
+177,Mumbai,MUMBAI PREMISE,Female,344385,CONS,Ms Manorama Pawar,Project Engineer,ETU,manoramap@cdac.in,12/05/1998,16/03/2021,16/03/2021,15/03/2022
+178,Mumbai,Juhu,Male,344387,CONS,Mr Prathamesh Patil,Project Engineer,SENG,prathamesh@cdac.in,07/03/1996,17/03/2021,17/03/2021,16/03/2022
+179,Mumbai,MUMBAI PREMISE,Female,344389,CONS,Ms Komal Wagdare,Project Engineer,ETU,wkomal@cdac.in,10/05/1997,18/03/2021,18/03/2021,17/03/2022
+180,Mumbai,MUMBAI PREMISE,Male,344390,CONS,Mr Kaushal Balte,Project Engineer,ETU,kaushalb@cdac.in,10/08/1996,18/03/2021,18/03/2021,17/03/2022
+181,Mumbai,MUMBAI PREMISE,Female,344442,CONS,Ms Nirmala Devmane,Project Engineer,ETU,knirmala@cdac.in,02/05/1997,08/04/2021,08/04/2021,07/04/2022
+182,Mumbai,MUMBAI PREMISE,Female,344443,CONS,Ms Dhanashri Vijay Bagul,Project Engineer,ETU,dhanashrib@cdac.in,08/11/1996,08/04/2021,08/04/2021,07/04/2022
+183,Mumbai,MUMBAI PREMISE,Male,344446,CONS,Mr Ramakrishna Kulkarni,Project Engineer,ETU,krama@cdac.in,22/02/1992,20/04/2021,20/04/2021,19/04/2022
+184,Mumbai,MUMBAI PREMISE,Male,344470,CONS,Mr Ganesh Ramchandra Pawar,Project Engineer,SENG,ganeshp@cdac.in,07/09/1995,03/05/2021,03/05/2021,02/05/2022
+185,Mumbai,MUMBAI PREMISE,Male,344471,CONS,Mr Ashish Ashok Shelar,Project Engineer,SENG,ashelar@cdac.in,29/05/1995,03/05/2021,03/05/2021,02/05/2022
+186,Mumbai,MUMBAI PREMISE,Female,344472,CONS,Ms Swapnali Umaji Chavan,Project Engineer,SENG,swapnali@cdac.in,01/09/1996,04/05/2021,04/05/2021,03/05/2022
+187,Mumbai,MUMBAI PREMISE,Male,344476,CONS,Mr Himanshu Katkar,Project Engineer,ETU,himanshuk@cdac.in,24/07/1998,04/05/2021,04/05/2021,03/05/2022
+188,Mumbai,MUMBAI PREMISE,Female,344478,CONS,Ms Asmita Vijay Patil,Project Engineer,SENG,asmitap@cdac.in,07/02/1998,05/05/2021,05/05/2021,04/05/2022
+189,Mumbai,MUMBAI PREMISE,Female,344479,CONS,Ms Shweta Bhere,Project Engineer,EDU TRN,shweta@cdac.in,15/07/1995,03/05/2021,03/05/2021,02/05/2022
+190,Mumbai,MUMBAI PREMISE,Male,344480,CONS,Mr Rushikesh Joshi,Project Engineer,ETU,rushikeshj@cdac.in,21/10/1996,05/05/2021,05/05/2021,04/05/2022
+191,Mumbai,Juhu,Male,344481,CONS,Mr Prateek Singh,Project Engineer,SENG,prateek@cdac.in,24/12/1996,05/05/2021,05/05/2021,04/05/2022
+192,Mumbai,MUMBAI PREMISE,Male,344482,CONS,Mr Rushikesh Pradip Ghantewar,Project Engineer,ETU,rushikeshg@cdac.in,17/07/1997,05/05/2021,05/05/2021,04/05/2022
+193,Mumbai,MUMBAI PREMISE,Male,344483,CONS,Mr Ruchit Ramugade,Project Engineer,ETU,ruchit@cdac.in,23/05/1994,06/05/2021,06/05/2021,05/05/2022
+194,Mumbai,MUMBAI PREMISE,Female,344484,CONS,Ms Roshani Ashok Deoghare,Project Engineer,ETU,roshanid@cdac.in,13/09/1993,06/05/2021,06/05/2021,05/05/2022
+195,Mumbai,MUMBAI PREMISE,Male,344486,CONS,Mr Amit  Raosaheb Walunj,Project Engineer,SENG,amitw@cdac.in,08/01/1997,06/05/2021,06/05/2021,05/05/2022
+196,Mumbai,Juhu,Female,344487,CONS,Ms Pratiksha  Gopal Khade,Project Engineer,SENG,pratiksha@cdac.in,14/04/1997,06/05/2021,06/05/2021,05/05/2022
+197,Mumbai,Juhu,Female,344488,CONS,Ms Muskan Chetan Garle,Project Engineer,ETU,muskan@cdac.in,10/05/1999,06/05/2021,06/05/2021,05/05/2022
+198,Mumbai,Juhu,Female,344489,CONS,Ms Manasi Sunil Sukate,Project Engineer,ETU,manasis@cdac.in,24/03/1999,06/05/2021,06/05/2021,05/05/2022
+199,Mumbai,MUMBAI PREMISE,Female,344490,CONS,Ms Komal Kudave,Project Engineer,ETU,kkomal@cdac.in,02/11/1996,06/05/2021,06/05/2021,05/05/2022
+200,Mumbai,MUMBAI PREMISE,Female,344491,CONS,Ms Ashita Markale,Project Engineer,ETU,ashita@cdac.in,19/11/1996,06/05/2021,06/05/2021,05/05/2022
+201,Mumbai,MUMBAI PREMISE,Male,344492,CONS,Mr Aniket Krushnat Gaikwad,Project Engineer,ETU,aniket@cdac.in,27/06/1997,06/05/2021,06/05/2021,05/05/2022
+202,Mumbai,MUMBAI PREMISE,Male,344493,CONS,Mr Vaibhav Jadhav,Project Engineer,ETU,vaibhavj@cdac.in,05/12/1996,06/05/2021,06/05/2021,05/05/2022
+203,Mumbai,MUMBAI PREMISE,Male,344494,CONS,Mr Aamir Nabeel Khan,Project Engineer,ETU,aamirk@cdac.in,04/12/1995,06/05/2021,06/05/2021,05/05/2022
+204,Mumbai,MUMBAI PREMISE,Male,344495,CONS,Mr Shubham Krishnakant Choube,Project Engineer,ETU,cshubham@cdac.in,14/10/1995,06/05/2021,06/05/2021,05/05/2022
+205,Mumbai,MUMBAI PREMISE,Female,344502,CONS,Ms Pooja Sanjayrao Patil,Project Engineer,ETU,poojapatil@cdac.in,07/06/1995,13/05/2021,13/05/2021,12/05/2022
+206,Mumbai,MUMBAI PREMISE,Female,344503,CONS,Ms Abhaya Haribhau Pathak,Project Engineer,ETU,abhaya@cdac.in,28/09/1993,13/05/2021,13/05/2021,12/05/2022
+207,Mumbai,Juhu,Male,344504,CONS,Mr Tejas Chandrashekhar Jadhav,Project Engineer,SENG,tejasj@cdac.in,23/11/1998,13/05/2021,13/05/2021,12/05/2022
+208,Mumbai,MUMBAI PREMISE,Male,344505,CONS,Mr Saurabh Rajkumar Asalkar,Project Engineer,ETU,saurabha@cdac.in,23/09/1998,13/05/2021,13/05/2021,12/05/2022
+209,Mumbai,MUMBAI PREMISE,Female,344506,CONS,Ms Shruti Jhariya,Project Engineer,ETU,SHRUTI JHARIYA <shrutij@cdac.in,10/09/1993,13/05/2021,13/05/2021,12/05/2022
+210,Mumbai,Juhu,Female,344507,CONS,Ms Gandhali Sandeep Temkar,Project Engineer,SENG,gandhali@cdac.in,26/02/1998,13/05/2021,13/05/2021,12/05/2022
+211,Mumbai,Juhu,Male,344508,CONS,Mr Kalpesh Shankar Sonawane,Project Engineer,SENG,kalpeshs@cdac.in,01/04/1998,13/05/2021,13/05/2021,12/05/2022
+212,Mumbai,Juhu,Male,344509,CONS,Mr Ritesh Manojkumar Jain,Project Engineer,SENG,riteshj@cdac.in,28/04/1998,13/05/2021,13/05/2021,12/05/2022
+213,Mumbai,Juhu,Male,344510,CONS,Mr Shubham Awasarkar,Project Engineer,SENG,shubhamra@cdac.in,24/02/1997,13/05/2021,13/05/2021,12/05/2022
+214,Mumbai,Juhu,Female,344511,CONS,Ms Dhanashree Tukaram Sutar,Project Engineer,SENG,dhanashrees@cdac.in,16/01/1995,13/05/2021,13/05/2021,12/05/2022
+215,Mumbai,MUMBAI PREMISE,Female,344512,CONS,Ms Pooja Dayaram Patil,Project Engineer,ETU,pdpatil@cdac.in,24/08/1995,13/05/2021,13/05/2021,12/05/2022
+216,Mumbai,Juhu,Male,344513,CONS,Mr Vikash Batham,Project Engineer,SENG,vikashb@cdac.in,25/08/1997,13/05/2021,13/05/2021,12/05/2022
+217,Mumbai,MUMBAI PREMISE,Female,344514,CONS,Ms Tejashri Anil Kundalwal,Project Engineer,ETU,tejashrik@cdac.in,22/12/1997,13/05/2021,13/05/2021,12/05/2022
+218,Mumbai,MUMBAI PREMISE,Male,344516,CONS,Mr Swaraj Sunil Adhav,Project Engineer,SENG,swaraj@cdac.in,17/01/1999,13/05/2021,13/05/2021,12/05/2022
+219,Mumbai,MUMBAI PREMISE,Male,344517,CONS,Mr Vikas Vishwakarma,Project Engineer,SENG,vvikas@cdac.in,03/09/1997,13/05/2021,13/05/2021,12/05/2022
+220,Mumbai,MUMBAI PREMISE,Male,344518,CONS,Mr Somnath Bhagwat Satpute,Project Engineer,SENG,somnaths@cdac.in,17/03/1996,13/05/2021,13/05/2021,12/05/2022
+221,Mumbai,MUMBAI PREMISE,Female,344519,CONS,Ms Mrunali Vijay Kapse,Project Engineer,ETU,mrunalik@cdac.in,04/02/1996,13/05/2021,13/05/2021,12/05/2022
+222,Mumbai,Juhu,Female,344520,CONS,Ms Aboli Sanjay Shinde,Project Engineer,SENG,abolis@cdac.in,05/03/1997,13/05/2021,13/05/2021,12/05/2022
+223,Mumbai,Juhu,Male,344521,CONS,Mr Magan Singh Yadav,Project Engineer,SENG,magan@cdac.in,01/02/1998,13/05/2021,13/05/2021,12/05/2022
+224,Mumbai,MUMBAI PREMISE,Male,344522,CONS,Mr Saurabh Bhedodkar,Project Engineer,ETU,sbhedodkar@cdac.in,24/04/1996,13/05/2021,13/05/2021,12/05/2022
+225,Mumbai,MUMBAI PREMISE,Male,344523,CONS,Mr Auodumbar Vithalrao Mande,Project Engineer,ETU,auodumbar@cdac.in,16/06/1996,13/05/2021,13/05/2021,12/05/2022
+226,Mumbai,MUMBAI PREMISE,Male,344524,CONS,Mr Umakant Sudhakar Bedse,Project Engineer,SENG,umakant@cdac.in,21/09/1997,17/05/2021,17/05/2021,16/05/2022
+227,Mumbai,Juhu,Male,344527,CONS,Mr Hardik Sharma,Project Engineer,SENG,hardik@cdac.in,02/03/1996,17/05/2021,17/05/2021,16/05/2022
+228,Mumbai,MUMBAI PREMISE,Male,344536,CONS,Mr Saurabh Ashok Sarda,Project Engineer,ETU,saurabhsarda@cdac.in,26/09/1992,27/05/2021,27/05/2021,26/05/2022
+229,Mumbai,MUMBAI PREMISE,Male,344537,CONS,Mr Rahul Motilal Yede,Project Engineer,ETU,rahulyede@cdac.in,26/01/1998,27/05/2021,27/05/2021,26/05/2022
+230,Mumbai,MUMBAI PREMISE,Male,344538,CONS,Mr Kamal Kant,Project Engineer,ETU,kamalk@cdac.in,10/03/1995,27/05/2021,27/05/2021,26/05/2022
+231,Mumbai,MUMBAI PREMISE,Female,344539,CONS,Ms Aishwarya Avinash Kamble,Project Engineer,ETU,aishwarya@cdac.in,23/11/1994,27/05/2021,27/05/2021,26/05/2022
+232,Mumbai,MUMBAI PREMISE,Male,344544,CONS,Mr Akshay Sanjay Chavan,Project Engineer,ITSS,akshayc@cdac.in,22/11/1995,27/05/2021,27/05/2021,26/05/2022
+233,Mumbai,MUMBAI PREMISE,Female,344545,CONS,Ms Neha Saini,Project Engineer,ETU,nehasaini@cdac.in,07/08/1993,27/05/2021,27/05/2021,26/05/2022
+234,Mumbai,Juhu,Male,344551,CONS,Mr Himalaya  Dubey,Project Engineer,SENG,himalaya@cdac.in,31/10/2000,07/06/2021,07/06/2021,06/06/2022
+235,Mumbai,Juhu,Male,344612,CONS,Mr Abhishek Pal,Knowledge Associate,ETU,abhishekpal@cdac.in,21/03/2000,14/07/2021,14/07/2021,13/07/2024
+236,Mumbai,MUMBAI PREMISE,Male,344641,CONS,Mr Khan Shadab Naoshad,Knowledge Associate,ETU,khans@cdac.in,03/03/1999,28/07/2021,28/07/2021,27/07/2024
+237,Mumbai,Juhu,Male,344651,CONS,Mr Muhammad Kasim,Knowledge Associate,ETU,muhammadk@cdac.in,20/06/2000,02/08/2021,02/08/2021,01/08/2024
+238,Mumbai,Juhu,Female,344670,CONS,Ms Seema Shirose,Project Engineer,ETU,seema@cdac.in,06/09/1992,03/08/2021,03/08/2021,02/08/2022
+239,Mumbai,Juhu,Female,344684,CONS,Ms Shalaka Parab,Project Engineer,ETU,Shalaka@cdac.in,17/06/1992,12/08/2021,12/08/2021,11/08/2022
+240,Mumbai,MUMBAI PREMISE,Male,344685,CONS,Mr Debmalya Paul,Project Engineer,ETU,debp@cdac.in,15/09/1994,13/08/2021,13/08/2021,12/08/2022
+241,Mumbai,Juhu,Male,344688,CONS,Mr Ashish Velaji Waghela,Project Engineer,ETU,ashishw@cdac.in,31/01/1993,17/08/2021,17/08/2021,16/08/2022
+242,Mumbai,MUMBAI PREMISE,Male,344692,CONS,Mr Robin Johri,Principal Engineer,ETU,robinj@cdac.in,12/03/1997,20/08/2021,20/08/2021,19/08/2022
+243,Mumbai,MUMBAI PREMISE,Female,344724,CONS,Ms Kewal Sanjay Jadhav,Project Engineer,ETU,kewal@cdac.in,12/12/1992,06/09/2021,06/09/2021,05/09/2022
+244,Mumbai,MUMBAI PREMISE,Female,344736,CONS,Ms Ira Ambole,Project Engineer,ETU,iraambole@cdac.in,12/04/1991,08/09/2021,08/09/2021,07/09/2022
+245,Mumbai,MUMBAI PREMISE,Male,344737,CONS,Mr Saurav Kumar,Project Engineer,ETU,sauravkumar@cdac.in,07/08/1994,13/09/2021,13/09/2021,12/09/2022
+246,Mumbai,MUMBAI PREMISE,Male,344751,CONS,Mr Sahani Samant Gama,Project Engineer,ETU,samant@cdac.in,30/10/1995,15/09/2021,15/09/2021,14/09/2022
+247,Mumbai,MUMBAI PREMISE,Male,344752,CONS,Mr Shreeshail Vikram Sarate,Project Engineer,ETU,shreeshail@cdac.in,20/10/1996,15/09/2021,15/09/2021,14/09/2022
