@@ -114,10 +114,10 @@
                			        	for (var i = 0; i < obj.centers.length; i++) {  
                    					option += '<option value="' + obj.centers[i].centerId + '">' + obj.centers[i].centerName +'</option>';  
                			        	}  
-				        	document.getElementById("center").innerHTML = option;
 					  }else{
 				        	var option = '<option value="ALL">All</option>';  
 					  }
+				       	  document.getElementById("center").innerHTML = option;
 				}
 			}
 
@@ -221,22 +221,31 @@
 		<div id="header_left">
 			<img src="./images/cdac-logo.png">
 		</div>
+
 	</div>
 
-	<div class="text-center"> 
-		<figure class="text-center">
-	  		<blockquote class="blockquote">
-	    			<p class="display-6">Soochna</p>
-	  		</blockquote>
-	  		<figcaption class="blockquote-footer">
-	    			<cite title="Source Title">  from cdacmumbai</cite>
-	  		</figcaption>
-		</figure>
-	</div> 
+	<div id="header_bottom">
+		<div style="float: left; margin: 2px 10px 0 0px;">
+			<figure class="text-center">
+				<blockquote class="blockquote">
+					<p class="display-6">Soochna</p>
+				</blockquote>
+				<figcaption class="blockquote-footer">
+					<cite title="Source Title">  from cdacmumbai</cite>
+				</figcaption>
+			</figure>
+		</div>
+		<div style="float:right; margin: 2px 10px 0 0px;">
+                        <a href="./logout"> <cite title="Source Title"> Logout </cite> </a>
+                </div>
+                <div style="float:right; margin: 2px 10px 0 0px;">
+                        <a href="./notice.jsp"> <cite title="Source Title"> notice </cite> </a>
+                </div>
+	</div>	
+
 	<br>
 
 	<form method="POST" >
-
 		<table class="table table-striped">	
 			<thead>
 				<tr>
@@ -265,6 +274,9 @@
 		<div id="response"> </div>	
 		<div id="noticelist"> </div>	
 	</form>
+	<div class="gradient_bottom">
+		<div class="copyright"> <p style="color:#2C3E50 " >Copyright &#169; 2022 C-DAC, Mumbai</p> </div>
+	</div>
 
 </div>
 <style>
