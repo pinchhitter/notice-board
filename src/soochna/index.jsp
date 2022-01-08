@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Essential JS 2 TypeScript Components" />
+	<link rel="shortcut icon" href="./images/cdac-tiny.png" type="image/x-icon" />
 	<meta name="author" content="shekhar" />
 
 
@@ -41,6 +42,12 @@
 	</style>
 
 	<script type="text/javascript">
+
+		function printDate(){
+			var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+			var today  = new Date();
+			document.getElementById("date").innerHTML="["+ today.toLocaleDateString("hi-IN", options)+" | "+today.toLocaleDateString("en-US", options)+"]";
+		}
 
 		function doDelete( noticeId ) {
 
@@ -98,10 +105,10 @@
 					var obj = JSON.parse( xmlhttp.responseText );		
 
 					if( obj.notice != null ){
-						var table = "<table class=\"table table-striped\"> <tr> <th> # </th> <th> Notice </th> <th> Start-Date </th> <th> End-Date</th> <th> </th> </tr>\n"		      	
+						var table = "<table class=\"table table-striped\"> <tr> <th> # </th> <th> Notice (Center) </th> <th> Start-Date </th> <th> End-Date</th> <th> </th> </tr>\n"		      	
 						for(var i = 0; i < obj.notice.length; i++) {
 						    var notice = obj.notice[i];
-						    table += "<tr> <td>"+(i+1)+"</td><td> "+notice.notice+" </td> <td>"+notice.start_date+"</td> <td>"+notice.end_date+"</td> <td> <input type=\"button\" value=\"Delete\" onclick=\"doDelete('"+notice.noticeid+"');\"> </td> </tr>\n";
+								    table += "<tr> <td>"+(i+1)+"</td><td> "+notice.notice+" ("+notice.center+") </td> <td>"+notice.start_date+"</td> <td>"+notice.end_date+"</td>  <td> <input type=\"button\" value=\"Delete\" onclick=\"doDelete('"+notice.noticeid+"');\"> </td> </tr>\n";
 						}
 						table += "\n</table>" 
 
@@ -118,6 +125,7 @@
 				        	var option = '<option value="ALL">All</option>';  
 					  }
 				       	  document.getElementById("center").innerHTML = option;
+					  printDate();							      
 				}
 			}
 
@@ -228,13 +236,18 @@
 		<div style="float: left; margin: 2px 10px 0 0px;">
 			<figure class="text-center">
 				<blockquote class="blockquote">
-					<p class="display-6">Soochna</p>
+					<p class="display-6">Soochna </p>
 				</blockquote>
 				<figcaption class="blockquote-footer">
-					<cite title="Source Title">  from cdacmumbai</cite>
+					<cite title="Source Title">  from cdacmumbai  </cite>
 				</figcaption>
 			</figure>
 		</div>
+		<div style="float:left; margin: 2px 10px 0 0px;">
+			<blockquote class="blockquote">
+				<p class="display-19 .bg-gradient-warning" id="date"> </p> 
+			</blockquote>
+		</div>	
 		<div style="float:right; margin: 2px 10px 0 0px;">
                         <a href="./logout"> <cite title="Source Title"> Logout </cite> </a>
                 </div>

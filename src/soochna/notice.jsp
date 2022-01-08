@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Essential JS 2 TypeScript Components" />
+	<link rel="shortcut icon" href="./images/cdac-tiny.png" type="image/x-icon" />
+	<meta name="author" content="shekhar" />
 
 	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -38,6 +43,12 @@
 	
 	var count = 0;
 	var oldmessage = ""; 
+
+	function printDate(){
+                  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                  var today  = new Date();
+                  document.getElementById("date").innerHTML="["+ today.toLocaleDateString("hi-IN", options)+" | "+today.toLocaleDateString("en-US", options)+"]";
+        }	
 
 	function loadCenter(){
 
@@ -146,7 +157,8 @@
 					}			
 					birthday += "<H3>A Very Happy Birthday</H3 </br>";
 					document.getElementById("birthday").innerHTML = birthday;
-				}			
+			      }			
+			      printDate();							      
   			}
 		}
 
@@ -177,19 +189,24 @@
 				</figcaption>
 			</figure>
 		</div>
+		<div style="float:left; margin: 2px 10px 0 0px;">
+			<blockquote class="blockquote">
+				<p class="display-19 .bg-gradient-warning" id="date"> </p> 
+			</blockquote>
+		</div>	
 		<div style="float:right; margin: 2px 10px 0 0px;">
 			Select Center: 
 			<select class="formVal" name="center" id="center" onChange="ajaxFunction();"> </select>	
 		</div>	
 	</div>	
 
-	<div> <br> <br> <hr> <br> <br> </div>
+	<div> <br> <br> <hr> <br> </div>
 
 	<div class="text-center" >
 		<div class="alert alert-success" role="alert" id="birthday"> </div>		
 		<div class="alert alert-danger" role="alert" id="screen"> </div> 
 	</div>
-	<div> <br> <hr> <br> </div>
+	<div> <hr> </div>
 	<div class="gradient_bottom">
 		<div class="copyright"> <p style="color:#2C3E50 " >Copyright &#169; 2022 C-DAC, Mumbai</p> </div>
 	</div>

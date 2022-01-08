@@ -38,20 +38,20 @@ public class NoticeList extends HttpServlet {
 				String message = "{\n";
 				try{
 					Timestamp ct = getCurrentTimeStamp();
-                                	String query =  "SELECT * from notices where is_delete = false order by creation_timestamp ";
+                                	String query =  "SELECT  noticeid, notice, start_date, end_date, center from notices where is_delete = false order by creation_timestamp ";
 					PreparedStatement stmt = conn.prepareStatement( query );
 					ResultSet rs = stmt.executeQuery();
 					boolean first =  true;
 					int count = 0;
 
-					System.err.println( stmt );
+					//System.err.println( stmt );
 
 					while( rs.next() ){
 						if( first ){
 							message += "\"notice\": [\n";
-							message	+= "\t{\"noticeid\":\""+rs.getString(1)+"\", \"notice\":\""+rs.getString(2)+"\", \"start_date\":\""+rs.getString(3)+"\",\"end_date\":\""+rs.getString(4)+"\"}";
+							message	+= "\t{\"noticeid\":\""+rs.getString(1)+"\", \"notice\":\""+rs.getString(2)+"\", \"start_date\":\""+rs.getString(3)+"\",\"end_date\":\""+rs.getString(4)+"\",\"center\":\""+rs.getString(5)+"\"}";
 						}else{
-							message	+= ",\n\t{\"noticeid\":\""+rs.getString(1)+"\", \"notice\":\""+rs.getString(2)+"\", \"start_date\":\""+rs.getString(3)+"\",\"end_date\":\""+rs.getString(4)+"\"}";
+							message	+= ",\n\t{\"noticeid\":\""+rs.getString(1)+"\", \"notice\":\""+rs.getString(2)+"\", \"start_date\":\""+rs.getString(3)+"\",\"end_date\":\""+rs.getString(4)+"\", \"center\":\""+rs.getString(5)+"\"}";
 						}	
 						count++;
 						first = false;

@@ -42,11 +42,11 @@ public class Notice extends HttpServlet {
 				try{
 					Timestamp ct = getCurrentTimeStamp(); 
 					String center = request.getParameter("center");
-					String query =  "SELECT notice from notices where is_delete = false and (  ? >= start_date and ? <= end_date ) order by creation_timestamp  DESC";
+					String query =  "SELECT notice from notices where center = 'ALL' and is_delete = false and (  ? >= start_date and ? <= end_date ) order by creation_timestamp  DESC";
 					PreparedStatement stmt = conn.prepareStatement( query );
 
-					if( center != null ){
-						query =  "SELECT notice from notices where center = ? and is_delete = false and (  ? >= start_date and ? <= end_date ) order by creation_timestamp  DESC";
+					if( center != null && !center.equals("-1") ){
+						query =  "SELECT notice from notices where ( center = 'ALL' OR center = ? ) and is_delete = false and (  ? >= start_date and ? <= end_date ) order by creation_timestamp  DESC";
 						stmt = conn.prepareStatement( query );
 						stmt.setString(1, center );
 						stmt.setTimestamp(2, ct );
@@ -56,7 +56,6 @@ public class Notice extends HttpServlet {
 						stmt.setTimestamp(2, ct );
 					}
 
-					
 					ResultSet rs = stmt.executeQuery();
 					PrintWriter out = response.getWriter();
 					boolean first =  true;
