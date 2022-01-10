@@ -42,7 +42,6 @@ public class Notice extends HttpServlet {
 			try{
 
 				String message = "{\n";
-				PreparedStatement stmt = null; 
 
 				try{
 					Connection conn = dbc.getConnection();
@@ -51,7 +50,7 @@ public class Notice extends HttpServlet {
 					String center = request.getParameter("center");
 					String query =  "SELECT notice from notices where center = 'ALL' and is_delete = false and (? >= start_date and ? <= end_date) order by creation_timestamp  DESC";
 
-					stmt = conn.prepareStatement( query );
+					PreparedStatement stmt = conn.prepareStatement( query );
 
 					if( center != null ){
 						query =  "SELECT notice from notices where (center = 'ALL' OR center = ?) and is_delete = false and (? >= start_date and ? <= end_date) order by creation_timestamp DESC";
@@ -83,15 +82,14 @@ public class Notice extends HttpServlet {
 					if( message.indexOf("message") >= 0)
 						message	+= "\n]\n";
 
-
-				}catch(Exception e){
-					e.printStackTrace();
-				}finally{
 					try{
 						stmt.close();
 					}catch(Exception e){
 						e.printStackTrace();
 					}		
+
+				}catch(Exception e){
+					e.printStackTrace();
 				}
 
 				try{
@@ -102,38 +100,43 @@ public class Notice extends HttpServlet {
 					String dob = tt[0].trim()+"-"+months[ Integer.parseInt( tt[1].trim() ) - 1 ];
 
 					String query =  "SELECT employee_name, gender, groupid from birthday where data_of_birth = ?";
-
-					stmt = conn.prepareStatement( query );
+					PreparedStatement stmt = conn.prepareStatement( query );
 					stmt.setString(1, dob );
-					ResultSet rs = stmt.executeQuery();
-					boolean first =  true;
 
-					while( rs.next() ){
-						if( first ){
-							if( message.indexOf("message") >= 0 ){
-								message += ",\"birthday\":[\n";
+					if( stmt != null ){
+
+						ResultSet rs = stmt.executeQuery();
+
+						boolean first =  true;
+
+						while( rs.next() ){
+							if( first ){
+								if( message.indexOf("message") >= 0 ){
+									message += ",\"birthday\":[\n";
+								}else{
+									message += "\"birthday\":[\n";
+								}
+								message	+= "{\"name\":\""+rs.getString(1)+"\",\"group\": \""+rs.getString(3)+"\", \"gender\":\""+rs.getString(2)+"\"}";
 							}else{
-								message += "\"birthday\":[\n";
-							}
-							message	+= "{\"name\":\""+rs.getString(1)+"\",\"group\": \""+rs.getString(3)+"\", \"gender\":\""+rs.getString(2)+"\"}";
-						}else{
-							message	+= ",\n{\"name\":\""+rs.getString(1)+"\",\"group\": \""+rs.getString(3)+"\", \"gender\":\""+rs.getString(2)+"\"}";
-						}		
-						first = false;
+								message	+= ",\n{\"name\":\""+rs.getString(1)+"\",\"group\": \""+rs.getString(3)+"\", \"gender\":\""+rs.getString(2)+"\"}";
+							}		
+							first = false;
+						}
+
+						if( message.indexOf("birthday") >= 0)
+							message	+= "\n]\n";
 					}
 
-					if( message.indexOf("birthday") >= 0)
-						message	+= "\n]\n";
-
-
-				}catch(Exception e){
-					e.printStackTrace();
-				}finally{
 					try{
 						stmt.close();
 					}catch(Exception e){
 						e.printStackTrace();
 					}		
+					
+
+
+				}catch(Exception e){
+					e.printStackTrace();
 				}
 
 				message	+= "\n}";

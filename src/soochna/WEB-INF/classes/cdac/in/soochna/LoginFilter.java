@@ -8,16 +8,24 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
 import java.text.SimpleDateFormat; 
 
 import cdac.in.soochna.DbConnect;
 
 public class LoginFilter implements Filter {
 
+	static List<String> relax;
+
 	
 
 	public void init(FilterConfig arg0) throws ServletException {
-
+		relax = new ArrayList<String>();
+		relax.add("/center"); 
+		relax.add("/soochna/center"); 
+		relax.add("/soochna/notice"); 
+		relax.add("/soochna/notice.jsp"); 
 	}  
 
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws ServletException, IOException {    
@@ -32,7 +40,7 @@ public class LoginFilter implements Filter {
 
 		boolean loginRequest = request.getRequestURI().equals(loginURI);
 
-		if ( loggedIn || loginRequest || request.getRequestURI().equals("/center") || request.getRequestURI().equals("/soochna/center") || request.getRequestURI().equals("/soochna/notice") ||  request.getRequestURI().equals("/soochna/notice.jsp") || request.getRequestURI().indexOf("images") >= 0 ) {
+		if ( loggedIn || loginRequest || relax.contains( request.getRequestURI() ) || request.getRequestURI().indexOf("images") >= 0 ) {
 			chain.doFilter( request, response );
 		} else {
 			response.sendRedirect(loginURI);
