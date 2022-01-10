@@ -87,7 +87,6 @@
         }
 
 	function ajaxFunction() {
-
 		
 		var xmlhttp;
 	        var elements = document.getElementsByClassName("formVal");
@@ -131,16 +130,30 @@
 						else	      
 					        	message += "<hr> <H1>"+ obj.notice[i].message+"</H1> </br>"
 
-						forvoice += " "+ obj.notice[i].message ;
+						forvoice += " " + obj.notice[i].message ;
 					}			
 
 					//message += "\n</marquee>";
-							      //
+
 					var toSpeak = new SpeechSynthesisUtterance( forvoice );
 					var voices = synth.getVoices();
 					toSpeak.voice = voices[7];
-					//synth.speak( toSpeak );
+
+					try{
+
+						//console.log( forvoice +" "+oldmessage+" "+ ( forvoice != oldmessage ) );
+
+						if( ( forvoice != null && oldmessage != null ) &&  forvoice != oldmessage ){	
+							synth.speak( toSpeak );
+						}
+
+					}catch(err ){
+					
+					}
+
 					document.getElementById("screen").innerHTML = message;
+					
+					oldmessage = forvoice;
 			      }else{
 				      document.getElementById("screen").innerHTML = "<H5> No Notice currently </H5>";
 			      }

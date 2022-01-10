@@ -16,14 +16,17 @@ public class Notice extends HttpServlet {
 
 	static String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
+	static DbConnect dbc = null;
+
 	public void init() throws ServletException {
+		dbc = new DbConnect();
 		System.out.println("Servlet initialsizing..");
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+		throws ServletException, IOException {
 			doPost( request, response);		
-	}
+		}
 
 	private static java.sql.Timestamp getCurrentTimeStamp() {
 
@@ -32,21 +35,26 @@ public class Notice extends HttpServlet {
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+		throws ServletException, IOException {
+
 			response.setContentType("text/html");
+
 			try{
-				DbConnect dbc = new DbConnect();
-				Connection conn = dbc.getConnection();
 
 				String message = "{\n";
+				PreparedStatement stmt = null; 
+
 				try{
+					Connection conn = dbc.getConnection();
+
 					Timestamp ct = getCurrentTimeStamp(); 
 					String center = request.getParameter("center");
-					String query =  "SELECT notice from notices where center = 'ALL' and is_delete = false and (  ? >= start_date and ? <= end_date ) order by creation_timestamp  DESC";
-					PreparedStatement stmt = conn.prepareStatement( query );
+					String query =  "SELECT notice from notices where center = 'ALL' and is_delete = false and (? >= start_date and ? <= end_date) order by creation_timestamp  DESC";
 
-					if( center != null && !center.equals("-1") ){
-						query =  "SELECT notice from notices where ( center = 'ALL' OR center = ? ) and is_delete = false and (  ? >= start_date and ? <= end_date ) order by creation_timestamp  DESC";
+					stmt = conn.prepareStatement( query );
+
+					if( center != null ){
+						query =  "SELECT notice from notices where (center = 'ALL' OR center = ?) and is_delete = false and (? >= start_date and ? <= end_date) order by creation_timestamp DESC";
 						stmt = conn.prepareStatement( query );
 						stmt.setString(1, center );
 						stmt.setTimestamp(2, ct );
@@ -55,6 +63,9 @@ public class Notice extends HttpServlet {
 						stmt.setTimestamp(1, ct );
 						stmt.setTimestamp(2, ct );
 					}
+
+
+					System.out.println( request.getRemoteAddr()+": "+ stmt );
 
 					ResultSet rs = stmt.executeQuery();
 					PrintWriter out = response.getWriter();
@@ -77,22 +88,22 @@ public class Notice extends HttpServlet {
 					e.printStackTrace();
 				}finally{
 					try{
-						dbc.close();
+						stmt.close();
 					}catch(Exception e){
 						e.printStackTrace();
 					}		
 				}
 
 				try{
-
-					conn = dbc.getConnection();
+					Connection conn = dbc.getConnection();
 					SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 					String date = formatter.format(new Date());
 					String[] tt = date.split("/");
-                        		String dob = tt[0].trim()+"-"+months[ Integer.parseInt( tt[1].trim() ) - 1 ];
+					String dob = tt[0].trim()+"-"+months[ Integer.parseInt( tt[1].trim() ) - 1 ];
 
 					String query =  "SELECT employee_name, gender, groupid from birthday where data_of_birth = ?";
-					PreparedStatement stmt = conn.prepareStatement( query );
+
+					stmt = conn.prepareStatement( query );
 					stmt.setString(1, dob );
 					ResultSet rs = stmt.executeQuery();
 					boolean first =  true;
@@ -119,11 +130,12 @@ public class Notice extends HttpServlet {
 					e.printStackTrace();
 				}finally{
 					try{
-						dbc.close();
+						stmt.close();
 					}catch(Exception e){
 						e.printStackTrace();
 					}		
 				}
+
 				message	+= "\n}";
 
 				PrintWriter out = response.getWriter();
@@ -137,9 +149,15 @@ public class Notice extends HttpServlet {
 				e.printStackTrace();
 
 			}
-	}
+		}
 
 	public void destroy() {
+
+		try{
+			dbc.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}		
 		System.out.println("Servlet Distroying..");
 	}
 }

@@ -27,8 +27,11 @@ public class Login extends HttpServlet {
 			response.sendRedirect(request.getContextPath() + "/index.jsp");
 		return;	
 		}	
-
+	
 		String username = request.getParameter("uname");
+		if( username != null )
+			username = username.toLowerCase();
+
 		String password = request.getParameter("pword");
 
 		Map<String, String> messages = new HashMap<String, String>();
@@ -46,7 +49,7 @@ public class Login extends HttpServlet {
 			try{
 				DbConnect dbc = new DbConnect();
 				Connection conn = dbc.getConnection();
-				String query =  "select userid from users where username = ? and password = ? "; 
+				String query =  "select username from users where username = ? and password = ? "; 
 				PreparedStatement stmt = conn.prepareStatement( query );
 				stmt.setString(1, username);
 				stmt.setString(2, password);

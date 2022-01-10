@@ -1,8 +1,8 @@
 CREATE TABLE users (
-	UserId SERIAL PRIMARY KEY, 
-	UserName VARCHAR NOT NULL, 
+	UserName VARCHAR NOT NULL PRIMARY KEY, 
 	Password VARCHAR NOT NULL 
 );
+
 
 CREATE TABLE notices(
 	noticeId SERIAL PRIMARY KEY, 
@@ -11,8 +11,10 @@ CREATE TABLE notices(
 	end_date TIMESTAMP NOT NULL,
 	center VARCHAR NOT NULL,
 	creation_timestamp TIMESTAMP NOT NULL,
+	created_by varchar NOT NULL,
 	is_delete BOOLEAN NOT NULL DEFAULT FALSE,
-	CONSTRAINT fk_center FOREIGN KEY(center) REFERENCES center( centerCode )
+	CONSTRAINT fk_center FOREIGN KEY(center) REFERENCES center( centerCode ),
+	CONSTRAINT fk_created_by FOREIGN KEY(created_by) REFERENCES users( UserName )
 );
 
 CREATE TABLE birthday ( 

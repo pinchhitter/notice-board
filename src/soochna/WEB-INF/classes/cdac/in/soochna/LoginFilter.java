@@ -22,7 +22,6 @@ public class LoginFilter implements Filter {
 
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws ServletException, IOException {    
 
-
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) res;
 		HttpSession session = request.getSession( true );
@@ -33,10 +32,13 @@ public class LoginFilter implements Filter {
 
 		boolean loginRequest = request.getRequestURI().equals(loginURI);
 
-		if ( loggedIn || loginRequest || request.getRequestURI().equals("/center") || request.getRequestURI().equals("/soochna/center") || request.getRequestURI().equals("/soochna/notice") ||  request.getRequestURI().equals("/soochna/notice.jsp") ) {
+		if ( loggedIn || loginRequest || request.getRequestURI().equals("/center") || request.getRequestURI().equals("/soochna/center") || request.getRequestURI().equals("/soochna/notice") ||  request.getRequestURI().equals("/soochna/notice.jsp") || request.getRequestURI().indexOf("images") >= 0 ) {
 			chain.doFilter( request, response );
 		} else {
 			response.sendRedirect(loginURI);
 		}
+	}
+	public void destroy() {
+		System.out.println("Servlet Distroying..");
 	}
 }

@@ -5,13 +5,14 @@ import java.io.*;
 import java.sql.*;
 
 class DbConnect{
-	
+
 	String dbURL = null;
 	String dbUname = null;
 	String dbPassword = null;
 	static Connection connection = null;
 
 	DbConnect(){
+
 		try{
 			Properties prop = new Properties();
 			prop.load(getClass().getResourceAsStream("config.properties"));
@@ -31,12 +32,12 @@ class DbConnect{
 
 	Connection getConnection(){
 
-
 		try{
 			if( connection == null ){	
 				Class.forName("org.postgresql.Driver");
 				connection = DriverManager.getConnection(dbURL, dbUname, dbPassword);
 			}
+
 		}catch(Exception e){
 			e.printStackTrace();
 			return null;

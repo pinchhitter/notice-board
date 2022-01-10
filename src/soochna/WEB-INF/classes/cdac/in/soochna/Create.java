@@ -44,6 +44,7 @@ public class Create extends HttpServlet {
 				String stime = request.getParameter("startdatetime").replaceAll("T", " ");	
 				String etime = request.getParameter("enddatetime").replaceAll("T", " ");	
 				String center = request.getParameter("center");
+				String user = (String) request.getSession().getAttribute("user");
 
 
 				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
@@ -52,7 +53,7 @@ public class Create extends HttpServlet {
 
 				DbConnect dbc = new DbConnect();
 				Connection conn = dbc.getConnection();
-				String query =  "insert into notices( notice , start_date, end_date, center, creation_timestamp) values ( ?, ?, ?, ?, ?)";
+				String query =  "insert into notices( notice , start_date, end_date, center, created_by, creation_timestamp) values ( ?, ?, ?, ?, ?, ?)";
 				PreparedStatement stmt = conn.prepareStatement( query );
 
 
@@ -61,7 +62,8 @@ public class Create extends HttpServlet {
 					stmt.setTimestamp(2, new Timestamp( sDateTime.getTime() ) );
 					stmt.setTimestamp(3, new Timestamp( eDateTime.getTime() ) );
 					stmt.setString(4, center );
-					stmt.setTimestamp(5, getCurrentTimeStamp() );
+					stmt.setString(5, user );
+					stmt.setTimestamp(6, getCurrentTimeStamp() );
 
 					stmt.executeUpdate();
 

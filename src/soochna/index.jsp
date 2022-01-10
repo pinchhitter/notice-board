@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
@@ -133,48 +134,6 @@
 			xmlhttp.send(null);
 		}
 
-
-		/*
-		$(document).ready(function () {
-
-			$('#CreateNotice').click( function( event ) {
-
-				event.preventDefault();
-				var form = $('#create')[0];								      
-				var data = new FormData(form);
-				alert( data );				      
-				$("#CreateNotice").prop("disabled", true);	
-				$.ajax({
-            				type: "POST",
-            				enctype: 'multipart/form-data',
-            				url: "./create",
-            				data: data,
-            				processData: false,
-            				contentType: false,
-            				cache: false,
-            				timeout: 800000,
-            				success: function ( data ) {
- 
-               					$("#response").text(data);
-                				console.log("SUCCESS : ", data);
-               	 				$("#CreateNotice").prop("disabled", false);
-
-						list_notice();
- 
-            				},
-            				error: function (e) {
-
-                				$("#response").text( e.responseText );
-                				console.log("ERROR : ", e);
-                				$("#CreateNotice").prop("disabled", false);
- 
-            				}
-        			});
-
-			});
-		});
-		*/
-		
 		function save_notice() {
 
 			var xmlhttp;

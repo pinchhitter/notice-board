@@ -1,9 +1,15 @@
 <!DOCTYPE html>
+
+<html lang="en">
+
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Essential JS 2 TypeScript Components" />
+	<link rel="shortcut icon" href="./images/cdac-tiny.png" type="image/x-icon" />
 	<meta name="author" content="shekhar" />
 
 	<!-- JavaScript Bundle with Popper -->
@@ -22,7 +28,6 @@
 
 		background-image: linear-gradient(to left, #d7d2cc 0%, #304352 100%);
 	}
-
 	.gradient_bottom {
 		height: 70px;
 		background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
@@ -32,16 +37,37 @@
 		padding: 10px;
 		clear: both;
 	}
-
 	#header_left {
         	float: left;
         	padding: 4px 4px;
         	height: 60px;
         	width: 540px;
 	}
+
+	#container {
+		max-width: 660px;
+	margin: 0 auto;
+	}
+	.e-input-group .e-input-group-icon,
+		.e-input-group.e-control-wrapper .e-input-group-icon,
+		.e-input-group.e-control-wrapper:not(.e-disabled) .e-input-group-icon:hover {
+	background: none;
+		}
+
+	.e-input-group:not(.e-disabled) .e-input-group-icon:active,
+		.e-input-group.e-control-wrapper:not(.e-disabled) .e-input-group-icon:active {
+	background: rgb(0, 120, 214);
+	}
+
 	</style>
 
 	<script type="text/javascript">
+
+		function printDate(){
+			var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+			var today  = new Date();
+			document.getElementById("date").innerHTML = "["+ today.toLocaleDateString("hi-IN", options)+" | "+today.toLocaleDateString("en-US", options)+"]";
+		}
 
 		function doLogin( ) {
 
@@ -63,38 +89,45 @@
 				if( xmlhttp.readyState == 4 ){
 					var obj = JSON.parse( xmlhttp.responseText );		
 					if( obj.Create == "Successful"){		    	
-					  list_notice();
+					     list_notice();
 					}							 
 				}
 			}
 
-			xmlhttp.open("GET","./login, true);
+			xmlhttp.open("GET","./login", true);
 			xmlhttp.send(null);
 		}
 	</script>
 </head>
 
-<body>
+<body onload="printDate()">
 
 <div class="container-lg">
-
 	<div class="gradient-header" align="center">
 		<div id="header_left">
 			<img src="./images/cdac-logo.png">
 		</div>
+
 	</div>
 
-	<div class="text-center"> 
-		<figure class="text-center">
-	  		<blockquote class="blockquote">
-	    			<p class="display-6">Soochna</p>
-	  		</blockquote>
-	  		<figcaption class="blockquote-footer">
-	    			<cite title="Source Title">  from cdacmumbai</cite>
-	  		</figcaption>
-		</figure>
-	</div> 
-
+	<div id="header_bottom">
+		<div style="float: left; margin: 2px 10px 0 0px;">
+			<figure class="text-center">
+				<blockquote class="blockquote">
+					<p class="display-6">Soochna </p>
+				</blockquote>
+				<figcaption class="blockquote-footer">
+					<cite title="Source Title">  from cdacmumbai  </cite>
+				</figcaption>
+			</figure>
+		</div>
+		<div style="float:left; margin: 2px 10px 0 0px;">
+			<blockquote class="blockquote">
+				<p class="display-19 .bg-gradient-warning" id="date"> </p> 
+			</blockquote>
+		</div>	
+	</div>	
+	<br>
 	<form method="POST">
 		<table class="table table-striped"> 
 			<tr> 
@@ -116,21 +149,6 @@
 		<div class="copyright"> <p style="color:#2C3E50 " >Copyright &#169; 2022 C-DAC, Mumbai</p> </div>
 	</div>
 </div>
-<style>
-#container {
-	max-width: 660px;
-margin: 0 auto;
-}
-.e-input-group .e-input-group-icon,
-	.e-input-group.e-control-wrapper .e-input-group-icon,
-	.e-input-group.e-control-wrapper:not(.e-disabled) .e-input-group-icon:hover {
-background: none;
-	}
 
-.e-input-group:not(.e-disabled) .e-input-group-icon:active,
-	.e-input-group.e-control-wrapper:not(.e-disabled) .e-input-group-icon:active {
-background: rgb(0, 120, 214);
-}
-</style>
 </body>
 </html>
