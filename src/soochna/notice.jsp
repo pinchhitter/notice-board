@@ -116,7 +116,7 @@
 			if(xmlhttp.readyState==4){
 
 				var obj = JSON.parse( xmlhttp.responseText );		
-				var synth = window.speechSynthesis;
+				//var synth = window.speechSynthesis;
 
 				var message = "";
 				var forvoice = "";
@@ -135,16 +135,20 @@
 
 					//message += "\n</marquee>";
 
-					var toSpeak = new SpeechSynthesisUtterance( forvoice );
-					var voices = synth.getVoices();
-					toSpeak.voice = voices[7];
-
 					try{
 
-						//console.log( forvoice +" "+oldmessage+" "+ ( forvoice != oldmessage ) );
-
 						if( ( forvoice != null && oldmessage != null ) &&  forvoice != oldmessage ){	
-							synth.speak( toSpeak );
+
+							var msg = new SpeechSynthesisUtterance();
+							var voices = window.speechSynthesis.getVoices();
+							msg.voice = voices[1]; 
+							msg.voiceURI = 'native';
+							msg.volume = 1; // 0 to 1
+							msg.rate = 1; // 0.1 to 10
+							msg.pitch = 0; //0 to 2
+							msg.text = forvoice;
+							msg.lang = 'hi-IN';
+							speechSynthesis.speak(msg);
 						}
 
 					}catch(err ){
@@ -164,9 +168,9 @@
 
 					for(var i = 0; i < obj.birthday.length; i++) {
 						if( i == 0)		    
-						   birthday +=  obj.birthday[i].name+" ("+obj.birthday[i].group+")";
+						   birthday += "<p>"+ obj.birthday[i].name+" ("+obj.birthday[i].group+") </p>";
 						else									      
-						    birthday +=  " <br> "+obj.birthday[i].name+" ("+obj.birthday[i].group+")";
+						    birthday +=  "<p> "+obj.birthday[i].name+" ("+obj.birthday[i].group+") </p> ";
 					}			
 					birthday += "<H3>A Very Happy Birthday</H3 </br>";
 					document.getElementById("birthday").innerHTML = birthday;

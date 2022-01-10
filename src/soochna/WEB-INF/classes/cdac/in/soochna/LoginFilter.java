@@ -26,6 +26,7 @@ public class LoginFilter implements Filter {
 		relax.add("/soochna/center"); 
 		relax.add("/soochna/notice"); 
 		relax.add("/soochna/notice.jsp"); 
+		relax.add("/soochna/test.jsp"); 
 	}  
 
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws ServletException, IOException {    
