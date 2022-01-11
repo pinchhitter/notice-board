@@ -37,6 +37,16 @@
      </filter-mapping>  
 
     <servlet>
+      <servlet-name>password</servlet-name>
+      <servlet-class>cdac.in.soochna.PasswordChange</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>password</servlet-name>
+        <url-pattern>/password</url-pattern>
+    </servlet-mapping>	
+
+    <servlet>
       <servlet-name>login</servlet-name>
       <servlet-class>cdac.in.soochna.Login</servlet-class>
     </servlet>

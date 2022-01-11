@@ -211,41 +211,50 @@
                         <a href="./logout"> <cite title="Source Title"> Logout </cite> </a>
                 </div>
                 <div style="float:right; margin: 2px 10px 0 0px;">
-                        <a href="./notice.jsp"> <cite title="Source Title"> notice </cite> </a>
+                        <a href="./notice.jsp"> <cite title="Source Title"> Notice </cite> </a> &nbsp;&nbsp; |
                 </div>
 	</div>	
-
-	<br>
+	</br> </br> <hr> </br>
 
 	<form method="POST" >
-		<table class="table table-striped">	
-			<thead>
+		<table class="table ">	
+			<thead class="table-dark">
 				<tr>
-					<th> Notice </th>
-					<th> Start Date-Time </th>
-					<th> End Date-Time  </th>
-					<th> Center  </th>
+						<th colspan = "3" > Notice </th> <th>  Date-Time / Center </th>
 				</tr>
-			 </thead>		
+			</thead>
 			 <tbody>	
 				<tr>
-					<td> <input class="formVal"  name = "notice" type="text"/> </td>
-					<td> <input class="formVal" type="datetime-local" id="startdatetime" name="startdatetime"> </td>
-					<td> <input class="formVal" type="datetime-local" id="enddatetime" name="enddatetime"> </td>
-					<td> 
-						<select class="formVal" name="center" id="center"> 
-						</select>	
-					</td>	
-				</tr>
-				<tr>
-					<td colspan="4" align='left'>  <input type="submit" value="Create Notice" onClick= "save_notice();return false;" > </td> 
+					<td colspan = "3" rowspan = "3" >
+						<textarea class="form-control formVal" name="notice" id="exampleFormControlTextarea1" rows="5" cols="80"></textarea>
+						<br>
+					 	<input type="submit" value="Create Notice" onClick= "save_notice();return false;" > 
+					</td>
+					<td rowspan = "3" > 
+						<table class="table table-hover" >
+						<tbody>	
+							<tr>
+								<th> Start Date-Time </th>
+								<th> <input class="formVal" type="datetime-local" id="startdatetime" name="startdatetime"> </th>
+							</tr>
+							<tr>
+								<th> End Data-Time </th>
+								<th>  <input class="formVal" type="datetime-local" id="enddatetime" name="enddatetime"> </th>
+							</tr>
+							<tr>
+								<th> Center </th>
+								<th> <select class="formVal" name="center" id="center"> </select> </th>	
+							</tr>
+						</tbody>
+						</table>
+					</td>
 				</tr>
 			</tbody>
 		</table>
-		<br>
-		<div id="response"> </div>	
-		<div id="noticelist"> </div>	
 	</form>
+	<br> 
+	<div id="response"> </div>	
+	<div id="noticelist"> </div>	
 	<div class="gradient_bottom">
 		<div class="copyright"> <p style="color:#2C3E50 " >Copyright &#169; 2022 C-DAC, Mumbai</p> </div>
 	</div>

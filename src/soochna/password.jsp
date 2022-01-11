@@ -65,39 +65,39 @@
 	<script type="text/javascript">
 
 		function printDate(){
+
 			var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 			var today  = new Date();
 			document.getElementById("date").innerHTML = "["+ today.toLocaleDateString("hi-IN", options)+" | "+today.toLocaleDateString("en-US", options)+"]";
 		}
 
-		function doLogin( ) {
+		function verify() {
 
-			var xmlhttp;
+			var uname = document.getElementById('uname').value;
+			var cpassword  = document.getElementById('cpword').value;
+			var npassword = document.getElementById('npword').value;
+			var rnpassword  = document.getElementById('rnpword').value;
 
-			if (window.XMLHttpRequest){
-				 // code for IE7+, Firefox, Chrome, Opera, Safari
-				  xmlhttp=new XMLHttpRequest();
-			}
-			else if (window.ActiveXObject){
-				// code for IE6, IE5
-				 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-			}
-			else{
-				alert("Your browser does not support XMLHTTP!");
-			}
-			xmlhttp.onreadystatechange=function(){
-
-				if( xmlhttp.readyState == 4 ){
-					var obj = JSON.parse( xmlhttp.responseText );		
-					if( obj.Create == "Successful"){		    	
-					     list_notice();
-					}							 
-				}
+			if( uname == "" || uname == null){
+				document.getElementById('euname').innerText = "Please enter the Username";
+			}	
+			if( cpassword == "" || cpassword == null){
+				document.getElementById('ecpass').innerText = "Please enter the Current Password";
+			}	
+			if( npassword == "" || npassword == null){
+				document.getElementById('enpass').innerText = "Please enter the New Password";
+			}	
+			if( npassword != rnpassword ){
+				document.getElementById('enrpass').innerText = "New password is not matching";
 			}
 
-			xmlhttp.open("GET","./login", true);
-			xmlhttp.send(null);
+			if( uname == "" || cpassword == "" || npassword == ""  || npassword != rnpassword ){
+				return false;
+			}
+
+		return true;
 		}
+
 	</script>
 </head>
 
@@ -135,43 +135,52 @@
 			messages = new HashMap<String, String>();
 		}
 	%>
-	<form method="POST">
+	<form method="POST" action="./password" onsubmit='return verify()' >
 		<table class="table table-striped"> 
-			     <%
-				if(messages.containsKey("success") ){
+			 <%
+			if(messages.containsKey("success") ){
 				%>
-					<tr>
-					<th colspan="2" class="text-left text-success" colspan="2"> 
-						<%= messages.get("success")%> 
-					
-					</th>
-					</tr>
+				<tr>
+				<td class="text-left .text-success" colspan="2" >
 				<%
-				}
-			     %> 
-			<tr> 
-				<th> Username </th>
-				<th> <input type="text" name="uname" id="uname" class="uname"></th>
-			</tr>
-			<tr> 
-				<th> Password </th>
-				<th> <input type="password" name="pword" id="pword" class = "pword"> </td>
-			</tr>
-			<tr> 
-				<td colspan="1">  <input type="Submit" value="Log in" > </td>
-				<td class="text-left text-danger" colspan="2"> 
-				     <%
-					if(messages.containsKey("login") ){
-						out.println(  messages.get("login") );
-					}
-				     %> 
+					out.println(  messages.get("success") );
+				%>
+				</td>
+				</tr>
+				<%
+			}
+		     	%> 
 				</td>
 			</tr>
+			<tr> 
+				<th> Username </th>
+				<td> <input type="text" name="uname" id="uname" class="uname"> <p  class="text-left text-danger" id="euname"> </p>  </td>
+			</tr>
+			<tr> 
+				<th> Current Password </th>
+				<td> <input type="password" name="cpword" id="cpword" class = "cpword"> <p  class="text-left text-danger" id="ecpass"> </p> </td>
+			</tr>
+			<tr> 
+				<th> New Password </th>
+				<td> <input type="password" name="npword" id="npword" class = "npword"> <p  class="text-left text-danger" id="enpass"> </p>  </td>
+			</tr>
+			<tr> 
+				<th> Retype New Password </th>
+				<td> <input type="password" name="rnpword" id="rnpword" class = "rnpword"> 
+					<p  class="text-left text-danger" id="enrpass">
+					 <%
+                                        	if(messages.containsKey("newpassword") ){
+                                                	out.println(  messages.get("newpassword") );
+                                        	}
+                                    	 %>
+				 	</p>  
+				</td>
+			</tr>
+
+			<tr> 
+				<td colspan="2" >  <input type="Submit" value="Change Password">  &nbsp;&nbsp; <a href="./login.jsp"> sign in </a> </td>
+			<tr> 
 		</table>	
-		<br>
-		</p>
-		<a href="./password.jsp"> Change Password </a> 
-		</p>
 
 	</form>	
 

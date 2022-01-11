@@ -164,7 +164,7 @@
 							    
 			      if( obj.birthday != null ){
 
-			      		var birthday = "<H3> C-DAC Mumbai family wishes </H3> <H2>";
+			      		var birthday = "<H3> C-DAC Mumbai family wishes </H3> <H2 class=\"text-monospace\">";
 
 					for(var i = 0; i < obj.birthday.length; i++) {
 						if( i == 0)		    
@@ -172,7 +172,7 @@
 						else									      
 						    birthday +=  "<p> "+obj.birthday[i].name+" ("+obj.birthday[i].group+") </p> ";
 					}			
-					birthday += "<H3>A Very Happy Birthday</H3 </br>";
+					birthday += "</H2> <H3>A Very Happy Birthday</H3 </br>";
 					document.getElementById("birthday").innerHTML = birthday;
 			      }			
 			      printDate();							      

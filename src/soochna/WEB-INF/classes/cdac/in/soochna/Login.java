@@ -68,7 +68,7 @@ public class Login extends HttpServlet {
 				return;
 
 			} else {
-				messages.put("login", "Unknown login, please try again");
+				messages.put("login", "Unknown login or wrong password, please try again");
 			}  
 		}
 

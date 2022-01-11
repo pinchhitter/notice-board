@@ -21,12 +21,16 @@ public class LoginFilter implements Filter {
 	
 
 	public void init(FilterConfig arg0) throws ServletException {
+
 		relax = new ArrayList<String>();
 		relax.add("/center"); 
+		relax.add("/password"); 
 		relax.add("/soochna/center"); 
 		relax.add("/soochna/notice"); 
 		relax.add("/soochna/notice.jsp"); 
 		relax.add("/soochna/test.jsp"); 
+		relax.add("/soochna/password.jsp"); 
+		relax.add("/soochna/password"); 
 	}  
 
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws ServletException, IOException {    
