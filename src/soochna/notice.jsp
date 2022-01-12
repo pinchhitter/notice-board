@@ -135,8 +135,8 @@
 
 					//message += "\n</marquee>";
 
+					/*
 					try{
-
 						if( ( forvoice != null && oldmessage != null ) &&  forvoice != oldmessage ){	
 
 							var msg = new SpeechSynthesisUtterance();
@@ -154,6 +154,7 @@
 					}catch(err ){
 					
 					}
+					*/
 
 					document.getElementById("screen").innerHTML = message;
 					

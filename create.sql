@@ -3,6 +3,11 @@ CREATE TABLE users (
 	Password VARCHAR NOT NULL 
 );
 
+CREATE TABLE center(
+ centerCode VARCHAR PRIMARY KEY,
+ centerName VARCHAR
+);
+
 
 CREATE TABLE notices(
 	noticeId SERIAL PRIMARY KEY, 
@@ -26,7 +31,5 @@ CREATE TABLE birthday (
 	groupId VARCHAR
 );
 
-CREATE TABLE center(
- centerCode VARCHAR PRIMARY KEY,
- centerName VARCHAR
-);
+
+ALTER TABLE users add name VARCHAR;

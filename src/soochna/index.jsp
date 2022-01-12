@@ -141,6 +141,34 @@
     			var formData = new FormData(); 
 			var data = "";
 
+			var notice = document.getElementById('notice').value;
+			var startdate = document.getElementById('startdatetime').value;
+			var enddate = document.getElementById('enddatetime').value;
+			var center = document.getElementById('center').value;
+
+			if( notice == "" || notice == null){
+				document.getElementById('selecterror').innerText = "Please enter the notice";
+				return false;
+			}	
+
+			if( startdate == "" || startdate == null){
+				document.getElementById('selecterror').innerText = "Please select start date/time";
+				return false;
+			}	
+
+
+			if( enddate == "" || enddate == null ){
+				document.getElementById('selecterror').innerText = "Please select end date/time";
+				return false;
+			}	
+
+			if( center == "" || center == "-1" || center == null){
+				document.getElementById('selecterror').innerText = "Please select the center";
+				return false;
+			}	
+
+			document.getElementById('selecterror').innerText = "";
+
     			for(var i=0; i<elements.length; i++){
 				if( i == 0)						    
 					data = elements[i].name + "=" + elements[i].value;			    
@@ -225,11 +253,10 @@
 			</thead>
 			 <tbody>	
 				<tr>
-					<td colspan = "3" rowspan = "3" >
-						<textarea class="form-control formVal" name="notice" id="exampleFormControlTextarea1" rows="5" cols="80"></textarea>
-						<br>
-					 	<input type="submit" value="Create Notice" onClick= "save_notice();return false;" > 
+					<td colspan = "3" >
+						<textarea class="form-control formVal" name="notice" id="notice" rows="5" cols="80"></textarea>
 					</td>
+
 					<td rowspan = "3" > 
 						<table class="table table-hover" >
 						<tbody>	
@@ -248,6 +275,9 @@
 						</tbody>
 						</table>
 					</td>
+				</tr>
+				<tr>
+					<td colspan = "1" > <input type="submit" value="Create Notice" onClick= "save_notice();return false;" > </td>  <td colspan="2">  <p class="text-left text-danger" id="selecterror"> </p> </td>
 				</tr>
 			</tbody>
 		</table>
