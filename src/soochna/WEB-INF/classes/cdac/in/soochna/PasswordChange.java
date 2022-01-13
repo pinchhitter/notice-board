@@ -12,6 +12,7 @@ import java.util.Date;
 import java.text.SimpleDateFormat; 
 
 import cdac.in.soochna.DbConnect;
+import cdac.in.soochna.SHA256Helper;
 
 public class PasswordChange extends HttpServlet {
 
@@ -63,9 +64,11 @@ public class PasswordChange extends HttpServlet {
 				Connection conn = dbc.getConnection();
 				String query =  "update users set password = ? where username = ? and password = ? "; 
 				PreparedStatement stmt = conn.prepareStatement( query );
-				stmt.setString(1, newpassword );
+
+				stmt.setString(1, SHA256Helper.hashPassword( newpassword ) );
 				stmt.setString(2, username );
-				stmt.setString(3, password);
+				stmt.setString(3, SHA256Helper.hashPassword( password) );
+
 				System.out.println( stmt );
 
 				int rowcount = stmt.executeUpdate();

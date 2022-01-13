@@ -1,6 +1,7 @@
 CREATE TABLE users (
 	UserName VARCHAR NOT NULL PRIMARY KEY, 
-	Password VARCHAR NOT NULL 
+	Password VARCHAR NOT NULL, 
+	name VARCHAR NOT NULL
 );
 
 CREATE TABLE center(
@@ -30,6 +31,3 @@ CREATE TABLE birthday (
 	gender VARCHAR, 
 	groupId VARCHAR
 );
-
-
-ALTER TABLE users add name VARCHAR;

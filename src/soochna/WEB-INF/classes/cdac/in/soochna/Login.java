@@ -49,10 +49,13 @@ public class Login extends HttpServlet {
 			try{
 				DbConnect dbc = new DbConnect();
 				Connection conn = dbc.getConnection();
+
 				String query =  "select username from users where username = ? and password = ? "; 
+
 				PreparedStatement stmt = conn.prepareStatement( query );
 				stmt.setString(1, username);
-				stmt.setString(2, password);
+				stmt.setString(2, SHA256Helper.hashPassword( password ) );
+
 				ResultSet rs = stmt.executeQuery();
 				while( rs.next() ){
 					user = rs.getString(1);

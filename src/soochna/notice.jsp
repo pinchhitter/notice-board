@@ -193,7 +193,7 @@
 <div class="container-lg">
 	<div class="gradient-header" align="center">
 		<div id="header_left">
-			<img src="./images/cdac-logo.png">
+			<a href="./index.jsp">  <img src="./images/cdac-logo.png"> </a>
 		</div>
 	</div>
 	<div id="header_bottom">

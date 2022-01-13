@@ -138,20 +138,18 @@
 	<form method="POST" action="./password" onsubmit='return verify()' >
 		<table class="table table-striped"> 
 			 <%
-			if(messages.containsKey("success") ){
-				%>
-				<tr>
-				<td class="text-left .text-success" colspan="2" >
-				<%
-					out.println(  messages.get("success") );
-				%>
-				</td>
-				</tr>
-				<%
-			}
+				if(messages.containsKey("error") ){
+					%>
+					<tr>
+					<td class="text-left text-danger" colspan="2" >
+					<%
+						out.println(  messages.get("error") );
+					%>
+					</td>
+					</tr>
+					<%
+				}
 		     	%> 
-				</td>
-			</tr>
 			<tr> 
 				<th> Username </th>
 				<td> <input type="text" name="uname" id="uname" class="uname"> <p  class="text-left text-danger" id="euname"> </p>  </td>
