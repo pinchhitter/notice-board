@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat;
 
 import cdac.in.soochna.DbConnect;
 
-public class Delete extends HttpServlet {
+public class CreateQuote extends HttpServlet {
 
 	private String message;
 
@@ -39,26 +39,29 @@ public class Delete extends HttpServlet {
 			response.setCharacterEncoding("UTF-8");
 
 			try{
-				int noticeid = Integer.parseInt( request.getParameter("noticeId") );	
-				String user = (String) request.getSession().getAttribute("user"); 
+				//System.out.println( request.getParameter("notice")+" <> "+request.getParameter("startdatetime")+" <> "+request.getParameter("enddatetime"));	
+				String quote = request.getParameter("quote");	
+				String author = request.getParameter("author");	
+				String user = (String) request.getSession().getAttribute("user");
 
 				DbConnect dbc = new DbConnect();
 				Connection conn = dbc.getConnection();
-				String query =  "update notices set is_delete = true where noticeid = ? and created_by = ? ";
+				String query =  "insert into quotes( quote, author, created_by, creation_timestamp) values ( ?, ?, ?, ?)";
 				PreparedStatement stmt = conn.prepareStatement( query );
-				try{
-					stmt.setInt(1, noticeid);
-					stmt.setString(2, user);
-					System.err.println("Query: "+stmt);
 
-					int count = stmt.executeUpdate();
-					if( count > 0 ){
-						out.print("{\"Create\" : \"Successful\" }");
-					}else{
-						out.print("{\"Create\" : \"Unauthorised action\" }");
-					}
+
+				try{
+					stmt.setString(1, quote);
+					stmt.setString(2, author);
+					stmt.setString(3, user);
+					stmt.setTimestamp(4, getCurrentTimeStamp() );
+
+					stmt.executeUpdate();
+
+					out.print("{\"Create\" : \"Successful\" }");
+
 				}catch(Exception e){
-					out.print("{\"Create\" : \"Failed: Error\" }");
+					out.print("{\"Create\" : \"Failed\" }");
 					e.printStackTrace();
 				}finally{
 					try{
@@ -67,9 +70,11 @@ public class Delete extends HttpServlet {
 						e.printStackTrace();
 					}		
 				}
+
 			}catch(Exception e){
 				out.print("{\"Create\" : \"Failed\" }");
 				e.printStackTrace();
+
 			}
 			out.flush();
 	}

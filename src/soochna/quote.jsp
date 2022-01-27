@@ -16,7 +16,6 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 	<style>
-
 	.gradient-header {
 		margin: 5px 0px 0px 0px;
 		padding: 0px;
@@ -50,7 +49,7 @@
 			document.getElementById("date").innerHTML="["+ today.toLocaleDateString("hi-IN", options)+" | "+today.toLocaleDateString("en-US", options)+"]";
 		}
 
-		function doDelete( noticeId ) {
+		function QuoteOfTheDay(  quoteId ) {
 
 			var xmlhttp;
 
@@ -69,21 +68,21 @@
 
 				if( xmlhttp.readyState == 4 ){
 					var obj = JSON.parse( xmlhttp.responseText );		
-					if( obj.Create == "Successful"){		    	
-					  document.getElementById("response").innerHTML = "<span style=\"color:GREEN\">Notice Deleted: "+ obj.Create+" </span>";
-					  list_notice();
+					if( obj.Update == "Successful"){		    	
+					  document.getElementById("response").innerHTML = "<span style=\"color:GREEN\">Quote of The day updated</span>";
+					  list_quote();
 					}							 
-					else		    
-					   document.getElementById("response").innerHTML = "<span style=\"color:RED\">Notice Deleted: "+ obj.Create+" </span>";
+					else{		    
+					   document.getElementById("response").innerHTML = "<span style=\"color:RED\">Quote of the Day update Failed</span>";
+					}
 				}
 			}
-
-			xmlhttp.open("GET","./deleteNotice?noticeId="+noticeId, true);
+			xmlhttp.open("GET","./quoteOfTheDay?quoteid="+quoteId, true);
 			xmlhttp.send(null);
 		}
 
 
-		function list_notice() {
+		function list_quote() {
 
 			var xmlhttp;
 
@@ -105,71 +104,51 @@
 
 					var obj = JSON.parse( xmlhttp.responseText );		
 
-					if( obj.notice != null ){
-						var table = "<table class=\"table table-striped\"> <tr> <th> # </th> <th> Notice (Center) </th> <th> Start-Date </th> <th> End-Date</th> <th> Created By </th> <th> </th> </tr>\n"		      	
-						for(var i = 0; i < obj.notice.length; i++) {
-						    var notice = obj.notice[i];
-								    table += "<tr> <td style='width: 2%'>"+(i+1)+"</td><td style='width: 55%'> "+notice.notice+" ("+notice.center+") </td> <td>"+notice.start_date+"</td> <td>"+notice.end_date+"</td> <td>"+notice.createdBy+"</td> <td> <input type=\"button\" value=\"Delete\" onclick=\"doDelete('"+notice.noticeid+"');\"> </td> </tr>\n";
+					if( obj.quotes != null ){
+						var table = "<table class=\"table table-striped\"> <tr> <th> # </th> <th> Quote </th> <th> Author </th> <th> Created By </th> <th> </th> </tr>\n"		      	
+						for(var i = 0; i < obj.quotes.length; i++) {
+						    var quote = obj.quotes[i];
+						    if( quote.QOD == "f")	
+						    	table += "<tr> <td style='width: 2%'>"+(i+1)+"</td><td style='width: 55%'> "+quote.quote+" </td> <td>"+quote.author+"</td> <td>"+quote.createdBy+"</td> <td> <input type=\"button\" value=\"Make Quote OF the Day\" onclick=\"QuoteOfTheDay('"+quote.quoteid+"');\"> </td> </tr>\n";
+						    else	
+						    	table += "<tr> <td style='width: 2%'>"+(i+1)+"</td><td style='width: 55%'> "+quote.quote+" </td> <td>"+quote.author+"</td> <td>"+quote.createdBy+"</td> <td> <span style=\"color:GREEN\">  Quote of The Day </span> </td> </tr>\n";
 						}
 						table += "\n</table>" 
-
-						document.getElementById("noticelist").innerHTML= table;
-																							  			}else{
-						document.getElementById("noticelist").innerHTML= "";
-																							  			}
-																							  		      	if( obj.centers != null ){ 	
-				        	var option = '<option value="-1">Select Center</option>';  
-               			        	for (var i = 0; i < obj.centers.length; i++) {  
-                   					option += '<option value="' + obj.centers[i].centerId + '">' + obj.centers[i].centerName +'</option>';  
-               			        	}  
-					  }else{
-				        	var option = '<option value="ALL">All</option>';  
-					  }
-				       	  document.getElementById("center").innerHTML = option;
-					  printDate();							      
+						document.getElementById("quotelist").innerHTML= table;
+		  			}else{
+						document.getElementById("quotelist").innerHTML= "";
+				        }	
+				printDate();							      
 				}
 			}
-
-			xmlhttp.open("GET","./noticelist", true);
+			xmlhttp.open("GET","./quotelist", true);
 			xmlhttp.send(null);
 		}
 
-		function save_notice() {
+		function save_quote() {
 
 			var xmlhttp;
 			var elements = document.getElementsByClassName("formVal");
     			var formData = new FormData(); 
 			var data = "";
 
-			var notice = document.getElementById('notice').value;
-			var startdate = document.getElementById('startdatetime').value;
-			var enddate = document.getElementById('enddatetime').value;
-			var center = document.getElementById('center').value;
+			var quote = document.getElementById('quote').value;
+			var author = document.getElementById('author').value;
 
-			if( notice == "" || notice == null){
-				document.getElementById('selecterror').innerText = "Please enter the notice";
+			if( quote == "" || quote == null){
+				document.getElementById('selecterror').innerText = "Please enter the quote";
 				return false;
 			}	
 
-			if( startdate == "" || startdate == null){
-				document.getElementById('selecterror').innerText = "Please select start date/time";
-				return false;
-			}	
-
-
-			if( enddate == "" || enddate == null ){
-				document.getElementById('selecterror').innerText = "Please select end date/time";
-				return false;
-			}	
-
-			if( center == "" || center == "-1" || center == null){
-				document.getElementById('selecterror').innerText = "Please select the center";
+			if( author == "" || author == null){
+				document.getElementById('selecterror').innerText = "Please enter the Author / Details";
 				return false;
 			}	
 
 			document.getElementById('selecterror').innerText = "";
 
     			for(var i=0; i<elements.length; i++){
+
 				if( i == 0)						    
 					data = elements[i].name + "=" + elements[i].value;			    
 				else			    
@@ -195,20 +174,20 @@
 				if(xmlhttp.readyState==4){
 				      var obj = JSON.parse( xmlhttp.responseText );		
 				      if( obj.Create == "Successful"){		    	
-					  document.getElementById("response").innerHTML = "<span style=\"color:GREEN\"> Adding Notice: "+ obj.Create+" </span>";
-					  list_notice();
+					  document.getElementById("response").innerHTML = "<span style=\"color:GREEN\"> Adding Quote: "+ obj.Create+" </span>";
+					  list_quote();
 				      }else{		    
-					   document.getElementById("response").innerHTML = "<span style=\"color:RED\"> Adding Notice: "+ obj.Create+" </span>";
+					   document.getElementById("response").innerHTML = "<span style=\"color:RED\"> Adding Quote: "+ obj.Create+" </span>";
 				      }
 				}
 			}
-			xmlhttp.open("GET","./create?"+data, true);
+			xmlhttp.open("GET","./createQuote?"+data, true);
 			xmlhttp.send( null );
 		}
 	</script>
 </head>
 
-<body onload="list_notice();" >
+<body onload="list_quote();" >
 
 <div class="container-lg">
 
@@ -242,7 +221,7 @@
                         <a href="./notice.jsp"> <cite title="Source Title"> View Notice </cite> </a> &nbsp;&nbsp; |
                 </div>
                 <div style="float:right; margin: 2px 10px 0 0px;">
-                        <a href="./quote.jsp"> <cite title="Source Title"> Quotes </cite> </a> &nbsp;&nbsp; |
+                        <a href="./index.jsp"> <cite title="Source Title"> Create Notice </cite> </a> &nbsp;&nbsp; |
                 </div>
 	</div>	
 	</br> </br> <hr> </br>
@@ -251,43 +230,31 @@
 		<table class="table ">	
 			<thead class="table-dark">
 				<tr>
-						<th colspan = "3" > Notice </th> <th>  Date-Time / Center </th>
+						<th colspan = "3" > Quote </th>
 				</tr>
 			</thead>
 			 <tbody>	
 				<tr>
 					<td colspan = "3" >
-						<textarea class="form-control formVal" name="notice" id="notice" rows="5" cols="80"></textarea>
-					</td>
-
-					<td rowspan = "3" > 
-						<table class="table table-hover" >
-						<tbody>	
-							<tr>
-								<th> Start Date-Time </th>
-								<th> <input class="formVal" type="datetime-local" id="startdatetime" name="startdatetime"> </th>
-							</tr>
-							<tr>
-								<th> End Data-Time </th>
-								<th>  <input class="formVal" type="datetime-local" id="enddatetime" name="enddatetime"> </th>
-							</tr>
-							<tr>
-								<th> Center </th>
-								<th> <select class="formVal" name="center" id="center"> </select> </th>	
-							</tr>
-						</tbody>
-						</table>
+						<textarea class="form-control formVal" name="quote" id="quote" rows="5" cols="80"></textarea>
 					</td>
 				</tr>
 				<tr>
-					<td colspan = "1" > <input type="submit" value="Create Notice" onClick= "save_notice();return false;" > </td>  <td colspan="2">  <p class="text-left text-danger" id="selecterror"> </p> </td>
+					<th colspan = "1"> Author / Details Of the Quote: </th>
+					<th colspan = "2"> <input class="form-control formVal"  name="author" id="author">   </th>
+				</tr>
+				<tt>
+					<th colspan = "3">
+						<input type="submit" value="Add Quote" onClick= "save_quote();return false;" >
+						<p class="text-left text-danger" id="selecterror"> </p> 
+					</th>
 				</tr>
 			</tbody>
 		</table>
 	</form>
 	<br> 
 	<div id="response"> </div>	
-	<div id="noticelist"> </div>	
+	<div id="quotelist"> </div>	
 	<div class="gradient_bottom">
 		<div class="copyright"> <p style="color:#2C3E50 " >Copyright &#169; 2022 C-DAC, Mumbai</p> </div>
 	</div>

@@ -31,3 +31,12 @@ CREATE TABLE birthday (
 	gender VARCHAR, 
 	groupId VARCHAR
 );
+
+CREATE TABLE Quotes (
+ 	quoteId SERIAL PRIMARY KEY,
+ 	Quote VARCHAR,
+ 	Author VARCHAR, 
+	createdBy VARCHAR, 
+	creation_timestamp TIMESTAMP NOT NULL,
+	QuoteOfDay BOOLEAN NOT NULL DEFAULT FALSE
+);

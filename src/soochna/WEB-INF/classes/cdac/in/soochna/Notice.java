@@ -38,120 +38,125 @@ public class Notice extends HttpServlet {
 		throws ServletException, IOException {
 
 			response.setContentType("text/html");
-
 			try{
 
 				String message = "{\n";
+				Connection conn = dbc.getConnection();
+				try{
+					String query =  "SELECT quote, author from quotes where quoteofday = true";
+					PreparedStatement stmt = conn.prepareStatement( query );
+					ResultSet rs = stmt.executeQuery();
 
-				boolean  done = false;
-				
-				while( ! done ){
+					if( rs.next() ){
+						message += "\"quotes\":[\n";
+						message	+= "{\"quote\":\""+rs.getString(1)+"\", \"author\":\""+rs.getString(2)+"\"}";
+					}
+					if( message.indexOf("quotes") >= 0)
+						message	+= "\n]\n";
 
 					try{
-						Connection conn = dbc.getConnection();
-
-						Timestamp ct = getCurrentTimeStamp(); 
-						String center = request.getParameter("center");
-						String query =  "SELECT notice from notices where center = 'ALL' and is_delete = false and (? >= start_date and ? <= end_date) order by creation_timestamp  DESC";
-
-						PreparedStatement stmt = conn.prepareStatement( query );
-
-						if( center != null ){
-							query =  "SELECT notice from notices where (center = 'ALL' OR center = ?) and is_delete = false and (? >= start_date and ? <= end_date) order by creation_timestamp DESC";
-							stmt = conn.prepareStatement( query );
-							stmt.setString(1, center );
-							stmt.setTimestamp(2, ct );
-							stmt.setTimestamp(3, ct );
-						}else{
-							stmt.setTimestamp(1, ct );
-							stmt.setTimestamp(2, ct );
-						}
-
-
-						System.out.println( request.getRemoteAddr()+": "+ stmt );
-
-						ResultSet rs = stmt.executeQuery();
-						PrintWriter out = response.getWriter();
-						boolean first =  true;
-
-						while( rs.next() ){
-							if( first ){
-								message += "\"notice\":[\n";
-								message	+= "{\"message\":\""+rs.getString(1)+"\"}";
-							}else{
-								message	+= ",\n {\"message\":\""+rs.getString(1)+"\"}";
-							}
-							first = false;
-						}
-						if( message.indexOf("message") >= 0)
-							message	+= "\n]\n";
-
-						done = true;
-
-						try{
-							stmt.close();
-						}catch(Exception e){
-							System.err.println("Exception happned");
-							//e.printStackTrace();
-						}		
-
+						stmt.close();
 					}catch(Exception e){
-						System.err.println("Exception happned");
-						//e.printStackTrace();
-					}
+						System.out.println("Exception 1.0");
+					}		
+
+				}catch(Exception e ){
+					System.out.println("Exception 1.1");
 				}
 
-				done = false;
+				conn = dbc.getConnection();
 
-				while( !done ){
+				try{
 
+					Timestamp ct = getCurrentTimeStamp(); 
+					String center = request.getParameter("center");
+					String query =  "SELECT notice, name from notices INNER JOIN users on created_by = username  where  center = 'ALL' and is_delete = false and (? >= start_date and ? <= end_date) order by creation_timestamp  DESC";
+					PreparedStatement stmt = conn.prepareStatement( query );
+
+					if( center != null ){
+						query =  "SELECT notice, name from notices INNER JOIN users on created_by = username where (center = 'ALL' OR center = ?) and is_delete = false and (? >= start_date and ? <= end_date) order by creation_timestamp DESC";
+						stmt = conn.prepareStatement( query );
+						stmt.setString(1, center );
+						stmt.setTimestamp(2, ct );
+						stmt.setTimestamp(3, ct );
+					}else{
+						stmt.setTimestamp(1, ct );
+						stmt.setTimestamp(2, ct );
+					}
+
+					//System.out.println( request.getRemoteAddr()+": "+ stmt );
+
+					ResultSet rs = stmt.executeQuery();
+					PrintWriter out = response.getWriter();
+					boolean first =  true;
+
+					while( rs.next() ){
+
+						if( first ){
+							if( message.indexOf("quotes") >= 0 )
+								message += ",\"notice\":[\n";
+							else
+								message += "\"notice\":[\n";
+							message	+= "{\"message\":\""+rs.getString(1)+"\", \"createdBy\":\""+rs.getString(2)+"\"}";
+						}else{
+							message	+= ",\n {\"message\":\""+rs.getString(1)+"\", \"createdBy\":\""+rs.getString(2)+"\"}";
+						}
+						first = false;
+					}
+					if( message.indexOf("message") >= 0)
+						message	+= "\n]\n";
 					try{
-						Connection conn = dbc.getConnection();
-						SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-						String date = formatter.format(new Date());
-						String[] tt = date.split("/");
-						String dob = tt[0].trim()+"-"+months[ Integer.parseInt( tt[1].trim() ) - 1 ];
+						stmt.close();
+					}catch(Exception e){
+						System.out.println("Exception 1.4");
+					}		
 
-						String query =  "SELECT employee_name, gender, groupid from birthday where data_of_birth = ?";
-						PreparedStatement stmt = conn.prepareStatement( query );
-						stmt.setString(1, dob );
+				}catch(Exception e){
+					System.out.println("Exception 1.5");
+					//e.printStackTrace();
+				}
 
-						if( stmt != null ){
+				conn = dbc.getConnection();
 
-							ResultSet rs = stmt.executeQuery();
+				try{
+					SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+					String date = formatter.format(new Date());
+					String[] tt = date.split("/");
+					String dob = tt[0].trim()+"-"+months[ Integer.parseInt( tt[1].trim() ) - 1 ];
 
-							boolean first =  true;
+					String query =  "SELECT employee_name, gender, groupid from birthday where data_of_birth = ?";
+					PreparedStatement stmt = conn.prepareStatement( query );
+					stmt.setString(1, dob );
 
-							while( rs.next() ){
-								if( first ){
-									if( message.indexOf("message") >= 0 ){
-										message += ",\"birthday\":[\n";
-									}else{
-										message += "\"birthday\":[\n";
-									}
-									message	+= "{\"name\":\""+rs.getString(1)+"\",\"group\": \""+rs.getString(3)+"\", \"gender\":\""+rs.getString(2)+"\"}";
+					if( stmt != null ){
+
+						ResultSet rs = stmt.executeQuery();
+						boolean first =  true;
+						while( rs.next() ){
+							if( first ){
+								if( message.indexOf("message") >= 0 ){
+									message += ",\"birthday\":[\n";
 								}else{
-									message	+= ",\n{\"name\":\""+rs.getString(1)+"\",\"group\": \""+rs.getString(3)+"\", \"gender\":\""+rs.getString(2)+"\"}";
-								}		
-								first = false;
-							}
-
-							if( message.indexOf("birthday") >= 0)
-								message	+= "\n]\n";
-							done = true;
+									message += "\"birthday\":[\n";
+								}
+								message	+= "{\"name\":\""+rs.getString(1)+"\",\"group\": \""+rs.getString(3)+"\", \"gender\":\""+rs.getString(2)+"\"}";
+							}else{
+								message	+= ",\n{\"name\":\""+rs.getString(1)+"\",\"group\": \""+rs.getString(3)+"\", \"gender\":\""+rs.getString(2)+"\"}";
+							}		
+							first = false;
 						}
 
-						try{
-							stmt.close();
-						}catch(Exception e){
-							System.err.println("Exception happned");
-							//e.printStackTrace();
-						}		
-
-					}catch(Exception e){
-						System.err.println("Exception happned");
-						//e.printStackTrace();
+						if( message.indexOf("birthday") >= 0)
+							message	+= "\n]\n";
 					}
+					try{
+						stmt.close();
+					}catch(Exception e){
+						System.out.println("Exception 1.7");
+					}		
+
+				}catch(Exception e){
+					System.out.println("Exception 1.8");
 				}
 
 				message	+= "\n}";
@@ -164,10 +169,9 @@ public class Notice extends HttpServlet {
 				out.flush();
 
 			}catch(Exception e){
-				e.printStackTrace();
-
+				System.out.println("Exception 2.0");
 			}
-		}
+	}
 
 	public void destroy() {
 

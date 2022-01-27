@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat;
 
 import cdac.in.soochna.DbConnect;
 
-public class Delete extends HttpServlet {
+public class QuoteOfTheDay extends HttpServlet {
 
 	private String message;
 
@@ -39,36 +39,43 @@ public class Delete extends HttpServlet {
 			response.setCharacterEncoding("UTF-8");
 
 			try{
-				int noticeid = Integer.parseInt( request.getParameter("noticeId") );	
+				int quoteid = Integer.parseInt( request.getParameter("quoteid") );	
 				String user = (String) request.getSession().getAttribute("user"); 
 
 				DbConnect dbc = new DbConnect();
 				Connection conn = dbc.getConnection();
-				String query =  "update notices set is_delete = true where noticeid = ? and created_by = ? ";
-				PreparedStatement stmt = conn.prepareStatement( query );
-				try{
-					stmt.setInt(1, noticeid);
-					stmt.setString(2, user);
-					System.err.println("Query: "+stmt);
 
-					int count = stmt.executeUpdate();
+				String query1 =  "update quotes set quoteofday = false";
+				String query2 =  "update quotes set quoteofday = true where quoteid = ?";
+
+				PreparedStatement stmt1 = conn.prepareStatement( query1 );
+				PreparedStatement stmt2 = conn.prepareStatement( query2 );
+
+				try{
+					stmt2.setInt(1, quoteid);
+					int count = stmt1.executeUpdate();
+					count += stmt2.executeUpdate();
+
 					if( count > 0 ){
-						out.print("{\"Create\" : \"Successful\" }");
+						out.print("{\"Update\" : \"Successful\" }");
 					}else{
-						out.print("{\"Create\" : \"Unauthorised action\" }");
+						out.print("{\"Update\" : \"Unauthorised action\" }");
 					}
+
 				}catch(Exception e){
-					out.print("{\"Create\" : \"Failed: Error\" }");
+					out.print("{\"Update\" : \"Failed: Error\" }");
 					e.printStackTrace();
 				}finally{
 					try{
+						stmt1.close();
+						stmt2.close();
 						dbc.close();
 					}catch(Exception e){
 						e.printStackTrace();
 					}		
 				}
 			}catch(Exception e){
-				out.print("{\"Create\" : \"Failed\" }");
+				out.print("{\"Update\" : \"Failed\" }");
 				e.printStackTrace();
 			}
 			out.flush();

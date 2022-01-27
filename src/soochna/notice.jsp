@@ -120,15 +120,31 @@
 
 				var message = "";
 				var forvoice = "";
+			
+							
+				if( obj.quotes != null){
+					message = "";
+					
+					for(var i = 0; i < obj.quotes.length; i++) {
+						if( i == 0)	      
+					        	message += "<H3>"+ obj.quotes[i].quote+" <H3>  <H4> - <i>"+obj.quotes[i].author+"</i> </H4> </br>"
+						else	      
+					        	message += "<hr> <H3>"+ obj.quotes[i].quote+" <H3>  <H4> - <i>"+obj.quotes[i].author+"</i> </H4> </br>"
+					}
+					document.getElementById("quotes").innerHTML = message;
+					
+				}else{
+					document.getElementById("quotes").innerHTML = "";
+				}
 						      
 				if( obj.notice != null ){
 					message = ""
 					//message = "<marquee width=\"50%\" direction=\"up\" height=\"180px\">"
 					for(var i = 0; i < obj.notice.length; i++) {
 						if( i == 0)	      
-					        	message += "<H1>"+ obj.notice[i].message+"</H1> </br>"
+					        	message += "<H2>"+ obj.notice[i].message+" <H2>  <H4> - <i>"+obj.notice[i].createdBy+"</i> </H4> </br>"
 						else	      
-					        	message += "<hr> <H1>"+ obj.notice[i].message+"</H1> </br>"
+					        	message += "<hr> <H2>"+ obj.notice[i].message+" <H2> <H4>  - <i> "+obj.notice[i].createdBy+"</i> </H4> </br>"
 
 						forvoice += " " + obj.notice[i].message ;
 					}			
@@ -165,7 +181,7 @@
 							    
 			      if( obj.birthday != null ){
 
-			      		var birthday = "<H3> C-DAC Mumbai family wishes </H3> <H2 class=\"text-monospace\">";
+			      		var birthday = "<H4> C-DAC Mumbai family wishes </H4> <H4 class=\"text-monospace\">";
 
 					for(var i = 0; i < obj.birthday.length; i++) {
 						if( i == 0)		    
@@ -173,9 +189,12 @@
 						else									      
 						    birthday +=  "<p> "+obj.birthday[i].name+" ("+obj.birthday[i].group+") </p> ";
 					}			
-					birthday += "</H2> <H3>A Very Happy Birthday</H3 </br>";
+					birthday += "A Very Happy Birthday</H4 </br>";
 					document.getElementById("birthday").innerHTML = birthday;
-			      }			
+			     }else{
+				document.getElementById("birthday").innerHTML = "";
+			     }			
+				
 			      printDate();							      
   			}
 		}
@@ -221,6 +240,7 @@
 	<div> <br> <br> <hr> <br> </div>
 
 	<div class="text-center" >
+		<div class="alert alert-info" role="alert" id="quotes"> </div>		
 		<div class="alert alert-success" role="alert" id="birthday"> </div>		
 		<div class="alert alert-danger" role="alert" id="screen"> </div> 
 	</div>

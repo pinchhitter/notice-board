@@ -77,6 +77,17 @@
     </servlet-mapping>	
 
     <servlet>
+      <servlet-name>qod</servlet-name>
+      <servlet-class>cdac.in.soochna.QuoteOfTheDay</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>qod</servlet-name>
+        <url-pattern>/quoteOfTheDay</url-pattern>
+    </servlet-mapping>	
+
+
+    <servlet>
       <servlet-name>create</servlet-name>
       <servlet-class>cdac.in.soochna.Create</servlet-class>
     </servlet>
@@ -87,9 +98,22 @@
     </servlet-mapping>	
 
     <servlet>
+      <servlet-name>createQuote</servlet-name>
+      <servlet-class>cdac.in.soochna.CreateQuote</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>createQuote</servlet-name>
+        <url-pattern>/createQuote</url-pattern>
+    </servlet-mapping>	
+
+
+    <servlet>
       <servlet-name>center</servlet-name>
       <servlet-class>cdac.in.soochna.Center</servlet-class>
     </servlet>
+
+
 
     <servlet-mapping>
         <servlet-name>center</servlet-name>
@@ -104,6 +128,16 @@
     <servlet-mapping>
         <servlet-name>list</servlet-name>
         <url-pattern>/noticelist</url-pattern>
+    </servlet-mapping>	
+
+    <servlet>
+      <servlet-name>quotelist</servlet-name>
+      <servlet-class>cdac.in.soochna.QuoteList</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>quotelist</servlet-name>
+        <url-pattern>/quotelist</url-pattern>
     </servlet-mapping>	
 	
     <servlet>

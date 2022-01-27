@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 
 import cdac.in.soochna.DbConnect;
 
-public class NoticeList extends HttpServlet {
+public class QuoteList extends HttpServlet {
 
 	public void init() throws ServletException {
 	}
@@ -38,7 +38,7 @@ public class NoticeList extends HttpServlet {
 				String message = "{\n";
 				try{
 					Timestamp ct = getCurrentTimeStamp();
-                                	String query =  "SELECT  noticeid, notice, start_date, end_date, center, name from notices INNER JOIN users on created_by = username where is_delete = false order by creation_timestamp ";
+                                	String query =  "SELECT  quoteid, quote, author, name, quoteofday  from quotes INNER JOIN users on created_by = username order by creation_timestamp ";
 					PreparedStatement stmt = conn.prepareStatement( query );
 					ResultSet rs = stmt.executeQuery();
 					boolean first =  true;
@@ -48,58 +48,18 @@ public class NoticeList extends HttpServlet {
 
 					while( rs.next() ){
 						if( first ){
-							message += "\"notice\": [\n";
-							message	+= "\t{\"noticeid\":\""+rs.getString(1)+"\", \"notice\":\""+rs.getString(2)+"\", \"start_date\":\""+rs.getString(3)+"\",\"end_date\":\""+rs.getString(4)+"\",\"center\":\""+rs.getString(5)+"\", \"createdBy\":\""+rs.getString(6)+"\"}";
+							message += "\"quotes\": [\n";
+							message	+= "\t{\"quoteid\":\""+rs.getString(1)+"\", \"quote\":\""+rs.getString(2)+"\", \"author\":\""+rs.getString(3)+"\",\"createdBy\":\""+rs.getString(4)+"\", \"QOD\":\""+rs.getString(5)+"\" }";
 						}else{
-							message	+= ",\n\t{\"noticeid\":\""+rs.getString(1)+"\", \"notice\":\""+rs.getString(2)+"\", \"start_date\":\""+rs.getString(3)+"\",\"end_date\":\""+rs.getString(4)+"\", \"center\":\""+rs.getString(5)+"\", \"createdBy\":\""+rs.getString(6)+"\" }";
+							message	+= ",\n{\"quoteid\":\""+rs.getString(1)+"\", \"quote\":\""+rs.getString(2)+"\", \"author\":\""+rs.getString(3)+"\",\"createdBy\":\""+rs.getString(4)+"\", \"QOD\":\""+rs.getString(5)+"\"}";
 						}	
 						count++;
 						first = false;
 					}
 
-					if( message.indexOf("notice") >= 0){
+					if( message.indexOf("quote") >= 0){
 						message	+= "\n\t]\n";
 					}	
-
-				}catch(Exception e){
-					e.printStackTrace();
-				}finally{
-					try{
-						dbc.close();
-					}catch(Exception e){
-						e.printStackTrace();
-					}		
-				}
-
-				conn = dbc.getConnection();
-				try{
-					String query =  "SELECT * from center";
-					PreparedStatement stmt = conn.prepareStatement( query );
-					ResultSet rs = stmt.executeQuery();
-					boolean first =  true;
-					int count = 0;
-
-					while( rs.next() ){
-						if( first ){
-							if( message.indexOf("notice") >= 0){
-								message += ",\"centers\": [\n";
-							}else{
-								message += "\"centers\": [\n";
-							}	
-
-							message	+= "\t{\"centerId\":\""+rs.getString(1)+"\", \"centerName\":\""+rs.getString(2)+"\"}";
-						}else{
-							message	+= ",\n\t{\"centerId\":\""+rs.getString(1)+"\", \"centerName\":\""+rs.getString(2)+"\"}";
-						}	
-						count++;
-						first = false;
-					}
-
-					if( message.indexOf("centers") >= 0){
-						message	+= "\n\t]\n";
-					}	
-
-
 
 				}catch(Exception e){
 					e.printStackTrace();
